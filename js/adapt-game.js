@@ -1,3 +1,15 @@
+define([
+    "core/js/adapt",
+    "core/js/models/itemsComponentModel",
+    "./BlindsView"
+], function(Adapt, ItemsComponentModel, BlindsView) {
+
+    return Adapt.register("blinds", {
+        view: BlindsView,
+        model: ItemsComponentModel
+    });
+
+});
 let i = 1;
 let count = 0;
 let set = ['Домашний театр','Гардероб официантов','Шубохранилище','Аквадискотека','Компьютерный клуб'];
