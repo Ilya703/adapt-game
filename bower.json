@@ -1,16 +1,16 @@
 {
-    "name": "adapt-blinds",
+    "name": "adapt-game",
     "repository": "git://github.com/Ilya703/adapt-game.git",
     "framework": ">=3",
-    "version": "4.0.1",
+    "version": "1.0.1",
     "homepage": "https://github.com/Ilya703/adapt-game",
     "issues": "https://github.com/Ilya703/adapt-game/issues",
-    "displayName": "Blinds",
-    "component": "blinds",
+    "displayName": "game",
+    "component": "game",
     "description": "Horizontally stacked images widen when hovered over. Optional captions are displayed. Demo available.",
-    "main": "/js/adapt-blinds.js",
+    "main": "/js/adapt-game.js",
     "keywords": [
-        "adapt-blinds",
+        "adapt-game",
         "adapt-plugin",
         "adapt-component"
     ],
