@@ -2,7 +2,7 @@
     "name": "adapt-blinds",
     "repository": "git://github.com/Ilya703/adapt-game.git",
     "framework": ">=3",
-    "version": "3.0.1",
+    "version": "4.0.1",
     "homepage": "https://github.com/Ilya703/adapt-game",
     "issues": "https://github.com/Ilya703/adapt-game/issues",
     "displayName": "Blinds",
