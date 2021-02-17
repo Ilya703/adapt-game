@@ -1,5 +1,5 @@
 {
-   "name": "adapt-contrib-game",
+    "name": "adapt-contrib-game",
     "repository": "git://github.com/Ilya703/Game.git",
     "framework": ">=3",
     "version": "3.0.1",
@@ -14,4 +14,5 @@
         "adapt-plugin",
         "adapt-component"
     ],
+    "license": "GPLv3"
 }
