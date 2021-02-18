@@ -1,51 +1,63 @@
-# adapt-blinds
+# adapt-contrib-text  
 
-<img align="right" src="https://raw.githubusercontent.com/danielstorey/adapt-resources/master/blinds-demo.jpg" alt="blinds in action">
-**Blinds** is a *presentation component* Created by Dan storey.
+**Text** is a *presentation component* bundled with the [Adapt framework](https://github.com/adaptlearning/adapt_framework).  
 
-When a learner hovers on one of the images, it widens and the other images narrow accordingly. If set, then an array of captions will appear. Positions and timings of these can be customised.
+<img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/text01.png" alt="sample text component">
 
-[**Click here for an interactive demo**](https://danielstorey.github.io/adapt-demo-course/#/id/co-main)
+**Text**'s simple purpose is to present text. The text may include HTML.
 
-##Installation
+[Visit the **Text** wiki](https://github.com/adaptlearning/adapt-contrib-text/wiki) for more information about its functionality and for explanations of key properties. 
 
-Run the following from the command line: `adapt install adapt-blinds`
+## Installation
+
+As one of Adapt's *[core components](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#components),* **Text** is included with the [installation of the Adapt framework](https://github.com/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework#installation) and the [installation of the Adapt authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki/Installing-Adapt-Origin).
+
+* If **Text** has been uninstalled from the Adapt framework, it may be reinstalled.
+With the [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run the following from the command line:  
+`adapt install adapt-contrib-text`
+
+    Alternatively, this component can also be installed by adding the following line of code to the *adapt.json* file:  
+    `"adapt-contrib-text": "*"`  
+    Then running the command:  
+    `adapt install`  
+    (This second method will reinstall all plug-ins listed in *adapt.json*.)  
+
+* If **Text** has been uninstalled from the Adapt authoring tool, it may be reinstalled using the [Plug-in Manager](https://github.com/adaptlearning/adapt_authoring/wiki/Plugin-Manager).  
+<div float align=right><a href="#top">Back to Top</a></div>
 
 ## Settings Overview
 
-The attributes listed below are used in *components.json* to configure **Blinds**, and are properly formatted as JSON in [*example.json*](https://github.com/danielstorey/adapt-blinds/example.json).
+The attributes listed below are used in *components.json* to configure **Text**, and are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-text/blob/master/example.json). Visit the [**Text** wiki](https://github.com/adaptlearning/adapt-contrib-text/wiki) for more information about how they appear in the [authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki). 
 
 ### Attributes
 
-**_component** (string): This value must be: `blinds`. (One word.)
+[**core model attributes**](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes): These are inherited by every Adapt component. [Read more](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes).
 
-**_setCompletionOn** (string): This value determines when the component registers as complete. Acceptable values are `"allItems"` and `"inview"`. `"allItems"` requires each blind to be visited. `"inview"` requires the **Blinds** component to enter the view port completely.
+**\_component** (string): This value must be: `text`.
 
-**height** (number): Height in pixels. Defaults to 500 if this property is not defined.
+**\_classes** (string): CSS class name to be applied to **Text**’s containing `div`. The class must be predefined in one of the Less files. Separate multiple classes with a space.
 
-**_expandBy** (number): The amount to expand the blind by when hovering over it. Defaults is 2 (width of the blind doubles).
+**\_layout** (string): This defines the horizontal position of the component in the block. Acceptable values are `full`, `left` or `right`.  
 
-**_items** (string): Each item represents one image for this component and contains values for **_graphic** and **captions**.
+**title** (string): A reference title for the component. **title** is distinct from the **displayTitle** which, if present, appears above the component. **title** provides the opportunity to use a shortened form in tighter spaces, such as in menus or in the drawer.  
 
->**src** (string): The image to be used for the blind item. Since the image is used as a background image for a `div` no src, alt or title attributes are required
+**displayTitle** (string): Optional text that will display as a title or header above the component. It can be used as a headline.   
 
->**_captions** (array): An optional array of captions for the image.
+**instruction** (string): This optional text appears above the component. It is frequently used to
+guide the learner’s interaction with the component.
 
->>**text** (string): Each caption must have a **_text** property. This is the text to be displayed inside the caption.
+**body** (string): Although optional, this text constitutes what is thought of as the primary *text* of the **Text** component. HTML is permitted.  
 
->>**top** (mixed): Each caption can contain optional **top**, **left** and **width** values to position them on the image. Values can be given as a number or string. A number will be interpreted as pixels but a string value may be used to specify a percentage (eg. "20%"). Default is 0. Multiple captions appear 10px below the previous one unless this value is specified.
-
->>**left** (mixed): Specify the position of the caption from the left. Value can be given as a number or a string. Default is 0;
-
->>**width** (mixed): Specify the max width of the caption. Value can be given as a string or a number. Default behaviour is to fit the width of the text
-
-### Accessibility
-
-
+<div float align=right><a href="#top">Back to Top</a></div>
 
 ## Limitations
 
-Viewport sizing
+No known limitations.
 
 ----------------------------
-**Author / maintainer:** Dan Storey
+**Version number:**  4.1.0   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>  
+**Framework versions:** 5.5+  
+**Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-text/graphs/contributors)  
+**Accessibility support:** WAI AA  
+**RTL support:** Yes  
+**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 12+13 for macOS/iOS/iPadOS, Opera  

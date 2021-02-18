@@ -1,17 +1,16 @@
 {
-    "name": "adapt-game",
-    "repository": "git://github.com/Ilya703/adapt-game.git",
-    "framework": ">=3",
-    "version": "1.0.1",
-    "homepage": "https://github.com/Ilya703/adapt-game",
-    "issues": "https://github.com/Ilya703/adapt-game/issues",
-    "displayName": "game",
-    "component": "blinds",
-    "description": "Horizontally stacked images widen when hovered over. Optional captions are displayed. Demo available.",
-    "main": "/js/adapt-game.js",
-    "keywords": [
-        "adapt-plugin",
-        "adapt-component"
-    ],
-    "license": "GPLv3"
+  "name": "adapt-contrib-game",
+  "version": "4.1.0",
+  "framework": ">=5.5",
+  "homepage": "https://github.com/Ilya703/adapt-game",
+  "issues": "https://github.com/Ilya703/adapt-game/issues",
+  "component" : "text",
+  "displayName" : "game",
+  "description": "A simple core contributed text component",
+  "main": "/js/adapt-contrib-game.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPL-3.0"
 }
