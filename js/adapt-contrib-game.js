@@ -55,9 +55,5 @@ define([
     model: ComponentModel.extend({}),// create a new class in the inheritance chain so it can be extended per component type if necessary later
     view: TextView
   });
-  return Adapt.register('block1', {
-    model: ComponentModel.extend({}),
-    view: TextView
-  });
 });
 
