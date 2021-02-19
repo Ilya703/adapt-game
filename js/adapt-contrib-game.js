@@ -51,7 +51,7 @@ define([
 
   TextView.template = 'text';
 
-  return Adapt.register('text', {
+  return Adapt.register('game', {
     model: ComponentModel.extend({}),// create a new class in the inheritance chain so it can be extended per component type if necessary later
     view: TextView
   });
