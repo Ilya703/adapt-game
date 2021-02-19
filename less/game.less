@@ -1,15 +1,196 @@
+body {
+	font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+	color: #201b2d;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+  overflow-x: hidden;
+  line-height: 15px;
+  font-weight: 600;
+  height: 100%;
+}
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}	
 .game{
   height: 518px;
   width: 100%;
   background: #f2f2f2;
-  position: absolute;
 }
 .block1{
   width: 650px;
   height: 428px;
-  position: relative;
   border-radius: 10px;
   border: 0.5px solid #bbb3b3;
   background: #fff;
   margin: 45px auto;
+}
+.count{
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  width: 10px;
+  color: #000;
+  position: absolute;
+  margin-left: 354px;
+}
+.count-text{
+  letter-spacing: 0.8px;
+  color: rgb(154, 154, 154);
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  width: 50px;
+}
+.question{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  background: #f2f2f2;
+  width: 420px;
+  height: 236px;
+  margin:0 auto;
+  cursor: grab;
+}
+.text{
+  font-weight: 700;
+  font-size: 21px;
+  letter-spacing: 0px;
+  text-align: center;
+  line-height: 28px;
+  margin-top: 20px;
+}
+.buttons{
+  display:flex;
+  width: 424px;
+  margin:0 auto;
+  margin-top: 30px;
+}
+.button_1{
+  display: block;
+  width: 207px;
+  height: 42px;
+  background: #b88b59;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 12px 18px 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+.button_2{
+  display: block;
+  width: 207px;
+  height: 42px;
+  background: #b88b59;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 12px 18px 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  margin-left: 8px;
+}
+.button_1:hover{
+  background: #926e45;
+  transition: 0.5s;
+}
+.button_2:hover{
+  background: #926e45;
+  transition: 0.5s;
+}
+.usage{
+  font-size: 12px;
+  color: rgb(113, 113, 113);
+  letter-spacing: 0px;
+  line-height: 14px;
+  max-width: 420px;
+  text-align: center;
+  white-space: pre-line;
+  font-weight: 400;
+  display:block;
+  width: 400px;
+  margin:0 auto;
+  margin-top: 12px;
+}
+.block_in{
+  width: 650px;
+  height: 428px;
+  position: absolute;
+  border-radius: 10px;
+  border: 0.5px solid #bbb3b3;
+  background: #fff;
+  margin: 0 auto;
+  padding: 25px;
+  z-index: -1;
+  opacity: 0;
+  transition: 1s;
+}
+.pic{
+  height: 315px;
+  width: 100%;
+  background: url(https://meduza.io/image/attachments/images/006/364/275/large/bMeGi7SQBFu-DJ3i5xZ3ow.jpg);
+}
+.result{
+  height: 315px;
+  width: 599px;
+  z-index: 3;
+  position: absolute;
+  background-color:rgba(0,0,0,.6);
+}
+.text_in{
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(255, 255, 255);
+  opacity: 0.8;
+  text-shadow: rgb(0 0 0 / 50%) 0px 2px 8px;
+  margin-left: 35px;
+  margin-top: 110px;
+}
+.box{
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 50%) 0px 2px 4px 0px, rgb(183 139 92) 0px 5px 0px 0px inset;
+  border-radius: 8px;
+  padding: 21px 20px 20px;
+  margin-top: 5px;
+  font-family: "PF Regal", serif;
+  width: 530px;
+  height: 130px;
+  margin-left: 35px;
+}
+.num{
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  letter-spacing: 0px;
+}
+.phrase{
+  font-family: "PF Regal", Times, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: rgb(0, 0, 0);
+  letter-spacing: 0px;
+  margin-top: 9px;
+}
+.once_more{
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  margin-left: 8px;
 }
