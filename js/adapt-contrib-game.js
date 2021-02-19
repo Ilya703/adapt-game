@@ -56,5 +56,4 @@ define([
     view: TextView
   });
 });
-var context = { title: "Собаке Качалова" };
-var html    = template(context);
+
