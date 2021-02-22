@@ -1,26 +1,26 @@
 {
-  "name": "adapt-contrib-narrative",
-  "version": "6.2.1",
+  "name": "adapt-contrib-game",
+  "version": "4.1.0",
   "framework": ">=5.5",
-  "homepage": "https://github.com/adaptlearning/adapt-contrib-narrative",
-  "issues": "https://github.com/adaptlearning/adapt_framework/issues/new",
-  "component": "narrative",
-  "displayName": "Narrative",
-  "description": "A component that displays an image gallery with accompanying text",
-  "main": "/js/adapt-contrib-narrative.js",
+  "homepage": "https://github.com/Ilya703/adapt-game",
+  "issues": "https://github.com/Ilya703/adapt-game/issues/new",
+  "component": "text",
+  "displayName": "game",
+  "description": "A simple core contributed text component",
+  "main": "/js/adapt-contrib-game.js",
   "keywords": [
     "adapt-plugin",
     "adapt-component"
   ],
   "license": "GPL-3.0",
-  "_release": "6.2.1",
+  "_release": "4.1.0",
   "_resolution": {
     "type": "version",
-    "tag": "v6.2.1",
-    "commit": "9b5ec2f4771f7aea19a1ec41c6353dd3d48878d6"
+    "tag": "v4.1.0",
+    "commit": "98e2fc7ba76d209280760b0dd07cce00c1590dab"
   },
-  "_source": "git://github.com/adaptlearning/adapt-contrib-narrative.git",
-  "_target": "6.2.1",
-  "_originalSource": "adapt-contrib-narrative",
+  "_source": "git://github.com/Ilya703/adapt-game.git",
+  "_target": "4.1.0",
+  "_originalSource": "adapt-contrib-game",
   "_direct": true
 }
