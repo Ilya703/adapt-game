@@ -6,7 +6,7 @@
 
     <div class="game__image-container{{#if _game.attribution}} has-attribution{{/if}}">
 
-      <img class="game__image js-game-set-image-src" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>
+      <img class="game__image js-game-set-image-src pic" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>
 
       {{#if _game.attribution}}
       <div class="component__attribution game__attribution">
