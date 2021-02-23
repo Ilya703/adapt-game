@@ -25,7 +25,7 @@ define([
     }
 
     resizeImage(width, setupInView) {
-      const imageWidth = width === '68px' ? 'small' : width;
+      const imageWidth = width === 'medium' ? 'small' : width;
       const imageSrc = (this.model.get('_game')) ? this.model.get('_game')[imageWidth] : '';
       this.$('.js-game-set-image-src').attr('src', imageSrc);
 
