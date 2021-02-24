@@ -6,12 +6,21 @@
 
     <div class="game__image-container{{#if _game.attribution}} has-attribution{{/if}}">
 
-      <div class="game__image js-game-set-image-src pic" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>
-      	<div class="game__image js-game-set-image-src pic_2" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>
-      		<div class="game__image js-game-set-image-src pic_3" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>
-      			<div class="game__image js-game-set-image-src pic_1" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}></div>
-      			<div class="game__image js-game-set-image-src text_1" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>text text</div>
+      <div class="game__image js-game-set-image-src game" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>
+      	<div class="game__image js-game-set-image-src block_1" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>
+      		<div class="game__image js-game-set-image-src" style="display:flex" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>
+      			<div class="game__image js-game-set-image-src count" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>ОЧКИ:</div>
+      			<div class="game__image js-game-set-image-src count-text" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>0</div>
       		</div>
+      		<div class="game__image js-game-set-image-src question" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>
+      			<div class="game__image js-game-set-image-src pic" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}></div>
+      			<div class="game__image js-game-set-image-src text" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>Домашний театр</div>
+      		</div>
+      		<div class="game__image js-game-set-image-src button" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>
+      			<div class="game__image js-game-set-image-src button_1" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>ЭТО ЕСТЬ</div>
+      			<div class="game__image js-game-set-image-src button_2" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>ВОТ ЭТОГО НЕТ</div>
+      		</div>
+      			<div class="game__image js-game-set-image-src usage" src="{{_game.src}}" data-large="{{_game.large}}" data-small="{{_game.small}}" {{#if _game.alt}}aria-label="{{{compile_a11y_normalize _game.alt}}}"{{else}}aria-hidden="true"{{/if}}>Отвечать можно стрелочками клавиатуры ← влево и вправо →<br>или перетаскивать мышкой</div>
       	</div>
       </div>
 
