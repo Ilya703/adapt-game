@@ -45,6 +45,4 @@ define([
     model: ComponentModel.extend({}),// create a new class in the inheritance chain so it can be extended per component type if necessary later
     view: GraphicView
   });
-  let h = 3;
-  document.getElementById('text').innerHTML = h;
 });
