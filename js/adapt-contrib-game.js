@@ -37,6 +37,8 @@ define([
         }
       });
     }
+    var h = 0;
+    document.getElementById('count').innerHTML = h;
   }
 
   GraphicView.template = 'game';
