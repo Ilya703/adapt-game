@@ -39,7 +39,6 @@ define([
     }
     function_1() {
       var c = this.get('.count');
-      document.getElementById('count').innerHTML = 0;
     },
   }
 
