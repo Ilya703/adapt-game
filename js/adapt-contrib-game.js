@@ -37,8 +37,10 @@ define([
         }
       });
     }
-    var h = 0;
-    document.getElementById('count').innerHTML = h;
+    function_1() {
+      var c = this.get('.count');
+      document.getElementById('count').innerHTML = 0;
+    },
   }
 
   GraphicView.template = 'game';
