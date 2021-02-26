@@ -37,9 +37,6 @@ define([
         }
       });
     }
-    function_1() {
-      var c = this.get('.count');
-    },
   }
 
   GraphicView.template = 'game';
