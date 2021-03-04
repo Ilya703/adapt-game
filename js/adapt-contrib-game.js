@@ -23,6 +23,7 @@ define([
         this.model.reset(isResetOnRevisit);
       }
     }
+    let a = document.getElementById('text').innerHTML;
 
     resizeImage(width, setupInView) {
       const imageWidth = width === 'medium' ? 'small' : width;
