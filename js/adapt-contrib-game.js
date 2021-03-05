@@ -24,14 +24,6 @@ define([
       }
     }
 
-    game() {
-      const game = this.model.get('_game');
-
-      if (isResetOnRevisit) {
-        this.model.reset(isResetOnRevisit);
-      }
-    }
-
     resizeImage(width, setupInView) {
       const imageWidth = width === 'medium' ? 'small' : width;
       const imageSrc = (this.model.get('_game')) ? this.model.get('_game')[imageWidth] : '';
@@ -45,6 +37,32 @@ define([
         }
       });
     }
+    game() {
+      const game = this.model.get('_game');
+      let counter = 0;
+      let i = 1;
+      let set = [a1,a2,a3,a4,a5];
+      let a1 = {
+        title: 'Домашний театр',
+        isTrue: true,
+      }
+      let a2 = {
+        title: 'Гардероб официантов',
+        isTrue: true,
+      }
+      let a3 = {
+        title: 'Шубохранилище',
+        isTrue: false,
+      }
+      let a4 = {
+        title: 'Аквадискотека',
+        isTrue: true,
+      }
+      let a5 = {
+        title: 'Компьютерный клуб',
+        isTrue: false,
+      }
+    }
   }
 
   GraphicView.template = 'game';
@@ -54,6 +72,3 @@ define([
     view: GraphicView
   });
 });
-let counter = 0;
-let i = 1;
-let set = ['Домашний театр','Гардероб официантов','Шубохранилище','Аквадискотека','Компьютерный клуб'];
