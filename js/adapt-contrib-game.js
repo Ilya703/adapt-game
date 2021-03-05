@@ -37,13 +37,13 @@ define([
         }
       });
     }
+    ggame(){
+      alert("Hi");
+    }
     game() {
       const game = this.model.get('_game');
       let counter = 0;
       let i = 1;
-      function ggame(){
-        alert("Hi!");
-      }
       let set = [a1,a2,a3,a4,a5];
       let a1 = {
         title: 'Домашний театр',
@@ -75,8 +75,3 @@ define([
     view: GraphicView
   });
 });
-function countRabbits() {
-    for(let i=1; i<=3; i++) {
-      alert("Кролик номер " + i);
-    }
-  }
