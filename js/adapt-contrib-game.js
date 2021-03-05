@@ -46,3 +46,4 @@ define([
     view: GraphicView
   });
 });
+let counter = 0;
