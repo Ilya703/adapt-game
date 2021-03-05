@@ -10,6 +10,9 @@ define([
       this.listenTo(Adapt, 'device:changed', this.resizeImage);
 
       this.checkIfResetOnRevisit();
+      function Game(){
+        alert("hi");
+      }
     }
 
     postRender() {
@@ -36,9 +39,6 @@ define([
           this.setupInviewCompletion('.game__widget');
         }
       });
-    }
-    ggame(){
-      alert("Hi");
     }
     game() {
       const game = this.model.get('_game');
