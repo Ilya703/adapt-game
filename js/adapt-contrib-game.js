@@ -24,6 +24,14 @@ define([
       }
     }
 
+    game() {
+      const game = this.model.get('_game');
+
+      if (isResetOnRevisit) {
+        this.model.reset(isResetOnRevisit);
+      }
+    }
+
     resizeImage(width, setupInView) {
       const imageWidth = width === 'medium' ? 'small' : width;
       const imageSrc = (this.model.get('_game')) ? this.model.get('_game')[imageWidth] : '';
@@ -49,7 +57,3 @@ define([
 let counter = 0;
 let i = 1;
 let set = ['Домашний театр','Гардероб официантов','Шубохранилище','Аквадискотека','Компьютерный клуб'];
-function A(){
-  alert("Hi");
-}
-A();
