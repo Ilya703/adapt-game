@@ -49,25 +49,7 @@ define([
 let counter = 0;
 let i = 1;
 let set = ['Домашний театр','Гардероб официантов','Шубохранилище','Аквадискотека','Компьютерный клуб'];
-$('.button_1').on('click',function(){
-  let a = document.getElementById('text').innerHTML;
-  if (a == 'Домашний театр'){
-    count += 1;
-  } else if (a == 'Гардероб официантов'){
-    count += 1;
-  } else if (a == 'Шубохранилище'){
-    count += 0;   
-  } else if (a == 'Аквадискотека'){
-    count += 1; 
-  } else if (a == 'Компьютерный клуб'){
-    count += 0;   
-  };
-  document.getElementById('text').innerHTML = set[i]
-  document.getElementById('count').innerHTML = count
-  i += 1
-  if (i == 6){
-  document.getElementById('text').innerHTML = ''
-  $('.block_in').css({'opacity': 1,'z-index': 2});
-  document.getElementById('num').innerHTML = `${count} из 5`;
-  }
-});
+function A(){
+  alert("Hi");
+}
+A();
