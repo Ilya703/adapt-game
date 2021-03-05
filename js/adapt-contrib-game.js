@@ -38,7 +38,10 @@ define([
       });
     }
     game() {
-      const game = this.model.get('_game');
+      const game = this.model.get('.button_1');
+      game.onclick = function(){
+        alert('Станет');
+      }
       let counter = 0;
       let i = 1;
       let set = [a1,a2,a3,a4,a5];
@@ -62,6 +65,7 @@ define([
         title: 'Компьютерный клуб',
         isTrue: false,
       }
+
     }
   }
 
