@@ -10,8 +10,9 @@ define([
       this.listenTo(Adapt, 'device:changed', this.resizeImage);
 
       this.checkIfResetOnRevisit();
-      
-      button.addEventListener('click',  function Game(){
+       
+      let a = document.getElementById('button');
+      a.addEventListener('click',  function Game(){
         alert("hi");
       });
     }
