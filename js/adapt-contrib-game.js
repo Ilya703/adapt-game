@@ -20,6 +20,8 @@ define([
       var button2 = document.querySelector(".button_2");
       var count = document.querySelector(".count");
       var text = document.querySelector(".text_1");
+      var inner = document.querySelector(".block_in");
+      var num = document.querySelector(".num");
       let i = 0;
       let counter = 0;
       let set = ['Домашний театр','Гардероб официантов','Шубохранилище','Аквадискотека','Компьютерный клуб'];
@@ -30,6 +32,10 @@ define([
         count.innerHTML = counter;
         i += 1;
         text.innerHTML = set[i];
+        if (i == 5){
+          inner.css({'opacity': 1,'z-index': 2});
+          num.innerHTML = `${counter} из 5`;
+        }
       };
       function game2() {
         if (i == 2 || i == 4){
@@ -38,6 +44,10 @@ define([
         count.innerHTML = counter;
         i += 1;
         text.innerHTML = set[i];
+        if (i == 5){
+          inner.css({'opacity': 1,'z-index': 2});
+          num.innerHTML = `${counter} из 5`;
+        }
       };
 
       button1.addEventListener("click", game1);
