@@ -21,22 +21,23 @@ define([
       var count = document.querySelector(".count");
       var text = document.querySelector(".text_1");
       let i = 0;
+      let counter = 0;
       let set = ['Домашний театр','Гардероб официантов','Шубохранилище','Аквадискотека','Компьютерный клуб'];
       function game1() {
         i += 1;
         text.innerHTML = set[i];
         if (i == 0 || i == 1 || i == 3){
-          count += 1;
+          counter += 1;
         }
-        count.innerHTML = count;
+        count.innerHTML = counter;
       };
       function game2() {
         i += 1;
         text.innerHTML = set[i];
         if (i == 2 || i == 4){
-          count += 1;
+          counter += 1;
         }
-        count.innerHTML = count;
+        count.innerHTML = counter;
       };
 
       button1.addEventListener("click", game1);
