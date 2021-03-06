@@ -12,7 +12,7 @@ define([
       this.checkIfResetOnRevisit();
       
       function game() {
-        alert( 'Спасибо!' );
+        alert( 'Hi!' );
       };
 
       button.addEventListener("click", game);
@@ -21,6 +21,8 @@ define([
 
     postRender() {
       this.resizeImage(Adapt.device.screenSize, true);
+
+      var button = document.querySelector(".button_2");
     }
 
     checkIfResetOnRevisit() {
