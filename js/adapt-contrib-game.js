@@ -22,6 +22,8 @@ define([
       var text = document.querySelector(".text_1");
       var inner = document.querySelector(".block_in");
       var num = document.querySelector(".num");
+      var phrase = document.querySelector(".phrase");
+      var once_more = document.querySelector(".once_more");
       let i = 0;
       let counter = 0;
       let set = ['Домашний театр','Гардероб официантов','Шубохранилище','Аквадискотека','Компьютерный клуб'];
@@ -33,6 +35,12 @@ define([
         i += 1;
         text.innerHTML = set[i];
         if (i == 5){
+          text.innerHTML = '';
+          if (counter < 3){
+            phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
+          } else {
+            phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
+          }
           inner.classList.add("show");
           num.innerHTML = `${counter} из 5`;
         }
@@ -45,13 +53,27 @@ define([
         i += 1;
         text.innerHTML = set[i];
         if (i == 5){
+          text.innerHTML = '';
+          if (counter < 3){
+            phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
+          } else {
+            phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
+          }
           inner.classList.add("show");
           num.innerHTML = `${counter} из 5`;
         }
       };
+      function more(){
+        inner.classList.remove("show");
+        i = 0;
+        counter = 0;
+        text.innerHTML = set[i];
+        count.innerHTML = counter;
+      };
 
       button1.addEventListener("click", game1);
       button2.addEventListener("click", game2);
+      once_more.addEventListener("click", more);
     }
 
     checkIfResetOnRevisit() {
