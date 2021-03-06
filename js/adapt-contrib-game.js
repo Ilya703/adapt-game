@@ -33,7 +33,7 @@ define([
         i += 1;
         text.innerHTML = set[i];
         if (i == 5){
-          inner.css({'opacity': 1,'z-index': 2});
+          inner.classList.add("show");
           num.innerHTML = `${counter} из 5`;
         }
       };
@@ -45,7 +45,7 @@ define([
         i += 1;
         text.innerHTML = set[i];
         if (i == 5){
-          inner.css({'opacity': 1,'z-index': 2});
+          inner.classList.add("show");
           num.innerHTML = `${counter} из 5`;
         }
       };
