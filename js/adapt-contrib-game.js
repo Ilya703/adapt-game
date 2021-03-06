@@ -25,7 +25,7 @@ define([
       function game1() {
         i += 1;
         text.innerHTML = set[i];
-        if (i == 0 or i == 1 or i == 3){
+        if (i == 0 || i == 1 || i == 3){
           count += 1;
         }
         count.innerHTML = count;
@@ -33,7 +33,7 @@ define([
       function game2() {
         i += 1;
         text.innerHTML = set[i];
-        if (i == 2 or i == 4){
+        if (i == 2 || i == 4){
           count += 1;
         }
         count.innerHTML = count;
