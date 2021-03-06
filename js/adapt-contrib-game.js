@@ -24,20 +24,20 @@ define([
       let counter = 0;
       let set = ['Домашний театр','Гардероб официантов','Шубохранилище','Аквадискотека','Компьютерный клуб'];
       function game1() {
-        i += 1;
         text.innerHTML = set[i];
         if (i == 0 || i == 1 || i == 3){
           counter += 1;
         }
         count.innerHTML = counter;
+        i += 1;
       };
       function game2() {
-        i += 1;
         text.innerHTML = set[i];
         if (i == 2 || i == 4){
           counter += 1;
         }
         count.innerHTML = counter;
+        i += 1;
       };
 
       button1.addEventListener("click", game1);
