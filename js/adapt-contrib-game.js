@@ -10,12 +10,6 @@ define([
       this.listenTo(Adapt, 'device:changed', this.resizeImage);
 
       this.checkIfResetOnRevisit();
-      
-      function game() {
-        alert( 'Hi!' );
-      };
-
-      button.addEventListener("click", game);
        
     }
 
@@ -23,6 +17,11 @@ define([
       this.resizeImage(Adapt.device.screenSize, true);
 
       var button = document.querySelector(".button_2");
+      function game() {
+        alert( 'Hi!' );
+      };
+
+      button.addEventListener("click", game);
     }
 
     checkIfResetOnRevisit() {
