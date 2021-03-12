@@ -19,26 +19,27 @@ define([
       var button1 = document.querySelector(".button_1");
       var button2 = document.querySelector(".button_2");
       var count = document.querySelector(".count");
-      var el = document.getElementsByTagName('.text_')[0];
+      var el = document.querySelector('.text_')[0];
       var inner = document.querySelector(".block_in");
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
       let i = 0;
       let counter = 0;
+      el.classList.remove("is_hide");
       let set1 = ['Домашний театр','Гардероб официантов','Шубохранилище','Аквадискотека','Компьютерный клуб'];
       function game1() {
         if (i == 0 || i == 1 || i == 3){
           counter += 1;
         }
         count.innerHTML = counter;
-        el = document.getElementsByTagName('.text_')[i];
+        el = document.querySelector('.text_')[i];
         el.classList.add("is_hide");
         i += 1;
-        el = document.getElementsByTagName('.text_')[i];
+        el = document.querySelector('.text_')[i];
         el.classList.remove("is_hide");
         if (i == 5){
-          el = document.getElementsByTagName('.text_')[i];
+          el = document.querySelector('.text_')[i];
           el.classList.add("is_hide");
           text.innerHTML = '';
           if (counter < 3){
@@ -55,14 +56,14 @@ define([
           counter += 1;
         }
         count.innerHTML = counter;
-        el = document.getElementsByTagName('.text_')[i];
+        el = document.querySelector('.text_')[i];
         el.classList.add("is_hide");
         i += 1;
-        el = document.getElementsByTagName('.text_')[i];
+        el = document.querySelector('.text_')[i];
         el.classList.remove("is_hide");
         if (i == 5){
           text.innerHTML = '';
-          el = document.getElementsByTagName('.text_')[i];
+          el = document.querySelector('.text_')[i];
           el.classList.add("is_hide");
           if (counter < 3){
             phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
@@ -76,7 +77,7 @@ define([
       function more(){
         inner.classList.remove("show");
         i = 0;
-        el = document.getElementsByTagName('.text_')[i];
+        el = document.querySelector('.text_')[i];
         counter = 0;
         text.innerHTML = el.classList.remove("is_hide");
         count.innerHTML = counter;
