@@ -59,8 +59,6 @@ define([
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
         i += 1;
-        el = document.querySelectorAll(".text_")[i];
-        el.classList.remove("is_hide");
         if (i == 5){
         	inner.classList.add("show");
           	el = document.querySelectorAll(".text_")[i];
