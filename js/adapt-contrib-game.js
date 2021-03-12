@@ -20,28 +20,22 @@ define([
       var button2 = document.querySelector(".button_2");
       var count = document.querySelector(".count");
       var text1 = document.querySelector(".text_1");
-      var text2 = document.querySelector(".text_2");
-      var text3 = document.querySelector(".text_3");
-      var text4 = document.querySelector(".text_4");
-      var text5 = document.querySelector(".text_5");
       var inner = document.querySelector(".block_in");
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
       let i = 0;
       let counter = 0;
-      let set = [text1,text2,text3,text4,text5]
       let set1 = ['Домашний театр','Гардероб официантов','Шубохранилище','Аквадискотека','Компьютерный клуб'];
       function game1() {
         if (i == 0 || i == 1 || i == 3){
           counter += 1;
         }
         count.innerHTML = counter;
-        set[i].classList.add("is_hide");
+        text1.classList.add("is_hide");
         i += 1;
-        set[i].classList.remove("is_hide");
         if (i == 5){
-        	set[i].classList.add("is_hide");
+        	text1.classList.add("is_hide");
           text.innerHTML = '';
           if (counter < 3){
             phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
@@ -57,12 +51,11 @@ define([
           counter += 1;
         }
         count.innerHTML = counter;
-        set[i].classList.add("is_hide");
+        text1.classList.add("is_hide");
         i += 1;
-        set[i].classList.remove("is_hide");
         if (i == 5){
           text.innerHTML = '';
-          set[i].classList.add("is_hide");
+          text1.classList.add("is_hide");
           if (counter < 3){
             phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           } else {
