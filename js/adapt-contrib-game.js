@@ -45,9 +45,9 @@ define([
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
             	phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
-          	}
+          	};
           	num.innerHTML = `${counter} из 5`;
-        }
+        };
       };
       function game2() {
         if (i == 2 || i == 4){
@@ -67,9 +67,9 @@ define([
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
             	phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
-          	}
+          	};
           	num.innerHTML = `${counter} из 5`;
-        }
+        };
       };
       function more(){
         inner.classList.remove("show");
