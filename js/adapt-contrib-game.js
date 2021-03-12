@@ -35,9 +35,7 @@ define([
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
         i += 1;
-        el = document.querySelectorAll(".text_")[i];
-        el.classList.remove("is_hide");
-        if (i > 4){
+        if (i == 5){
         	inner.classList.add("show");
           	el = document.querySelectorAll(".text_")[i];
           	el.classList.add("is_hide");
@@ -48,6 +46,10 @@ define([
           	};
           	num.innerHTML = `${counter} из 5`;
         };
+        if (i < 5){
+        	el = document.querySelectorAll(".text_")[i];
+        	el.classList.remove("is_hide");
+        }
       };
       function game2() {
         if (i == 2 || i == 4){
@@ -59,7 +61,7 @@ define([
         i += 1;
         el = document.querySelectorAll(".text_")[i];
         el.classList.remove("is_hide");
-        if (i > 4){
+        if (i == 5){
         	inner.classList.add("show");
           	el = document.querySelectorAll(".text_")[i];
           	el.classList.add("is_hide");
@@ -70,6 +72,10 @@ define([
           	};
           	num.innerHTML = `${counter} из 5`;
         };
+        if (i < 5){
+        	el = document.querySelectorAll(".text_")[i];
+        	el.classList.remove("is_hide");
+        }
       };
       function more(){
         inner.classList.remove("show");
