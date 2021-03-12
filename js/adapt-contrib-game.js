@@ -19,7 +19,7 @@ define([
       var button1 = document.querySelector(".button_1");
       var button2 = document.querySelector(".button_2");
       var count = document.querySelector(".count");
-      var el = document.querySelectorAll('.text_')[0];
+      var el = document.querySelectorAll(".text_")[0];
       var inner = document.querySelector(".block_in");
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
@@ -32,12 +32,12 @@ define([
           counter += 1;
         }
         count.innerHTML = counter;
-        el = document.querySelectorAll('.text_')[i];
+        el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
         i += 1;
-        el = document.querySelectorAll('.text_')[i];
+        el = document.querySelectorAll(".text_")[i];
         el.classList.remove("is_hide");
-        if (i == 4){
+        if (i == 5){
         	inner.classList.add("show");
         };
       };
@@ -46,19 +46,19 @@ define([
           counter += 1;
         }
         count.innerHTML = counter;
-        el = document.querySelectorAll('.text_')[i];
+        el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
         i += 1;
-        el = document.querySelectorAll('.text_')[i];
+        el = document.querySelectorAll(".text_")[i];
         el.classList.remove("is_hide");
-        if (i == 4){
+        if (i == 5){
         	inner.classList.add("show");
         };
       };
       function more(){
         inner.classList.remove("show");
         i = 0;
-        el = document.querySelectorAll('.text_')[i];
+        el = document.querySelectorAll(".text_")[i];
         counter = 0;
         el.classList.remove("is_hide");
         count.innerHTML = counter;
