@@ -19,14 +19,13 @@ define([
       var button1 = document.querySelector(".button_1");
       var button2 = document.querySelector(".button_2");
       var count = document.querySelector(".count");
-      var text1 = document.querySelector(".text_1");
+      var text1 = document.querySelector(".text_");
       var inner = document.querySelector(".block_in");
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
       let i = 0;
       let counter = 0;
-      text1[0].classList.remove("is_hide");
       let set1 = ['Домашний театр','Гардероб официантов','Шубохранилище','Аквадискотека','Компьютерный клуб'];
       function game1() {
         if (i == 0 || i == 1 || i == 3){
@@ -52,7 +51,7 @@ define([
           counter += 1;
         }
         count.innerHTML = counter;
-        text1.classList.add("is_hide");
+        text1.classList.remove("is_hide");
         i += 1;
         if (i == 5){
           text.innerHTML = '';
