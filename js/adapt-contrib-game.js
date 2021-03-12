@@ -19,7 +19,7 @@ define([
       var button1 = document.querySelector(".button_1");
       var button2 = document.querySelector(".button_2");
       var count = document.querySelector(".count");
-      var text1 = document.querySelector(".text_");
+      var el = document.getElementsByTagName('.text_')[0];
       var inner = document.querySelector(".block_in");
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
@@ -32,10 +32,14 @@ define([
           counter += 1;
         }
         count.innerHTML = counter;
-        _items[i].classList.remove("is_hide");
+        el = document.getElementsByTagName('.text_')[i];
+        el.classList.add("is_hide");
         i += 1;
+        el = document.getElementsByTagName('.text_')[i];
+        el.classList.remove("is_hide");
         if (i == 5){
-        	text1.classList.add("is_hide");
+          el = document.getElementsByTagName('.text_')[i];
+          el.classList.add("is_hide");
           text.innerHTML = '';
           if (counter < 3){
             phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
@@ -51,11 +55,15 @@ define([
           counter += 1;
         }
         count.innerHTML = counter;
-        text1.classList.remove("is_hide");
+        el = document.getElementsByTagName('.text_')[i];
+        el.classList.add("is_hide");
         i += 1;
+        el = document.getElementsByTagName('.text_')[i];
+        el.classList.remove("is_hide");
         if (i == 5){
           text.innerHTML = '';
-          text1.classList.add("is_hide");
+          el = document.getElementsByTagName('.text_')[i];
+          el.classList.add("is_hide");
           if (counter < 3){
             phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           } else {
@@ -68,8 +76,9 @@ define([
       function more(){
         inner.classList.remove("show");
         i = 0;
+        el = document.getElementsByTagName('.text_')[i];
         counter = 0;
-        text.innerHTML = set[i].classList.remove("is_hide");
+        text.innerHTML = el.classList.remove("is_hide");
         count.innerHTML = counter;
       };
 
