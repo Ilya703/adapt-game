@@ -32,7 +32,7 @@ define([
           counter += 1;
         }
         count.innerHTML = counter;
-        text1.classList.remove("is_hide");
+        _items[i].classList.remove("is_hide");
         i += 1;
         if (i == 5){
         	text1.classList.add("is_hide");
