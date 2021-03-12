@@ -26,13 +26,14 @@ define([
       var once_more = document.querySelector(".once_more");
       let i = 0;
       let counter = 0;
+      text1[0].classList.remove("is_hide");
       let set1 = ['Домашний театр','Гардероб официантов','Шубохранилище','Аквадискотека','Компьютерный клуб'];
       function game1() {
         if (i == 0 || i == 1 || i == 3){
           counter += 1;
         }
         count.innerHTML = counter;
-        text1.classList.add("is_hide");
+        text1.classList.remove("is_hide");
         i += 1;
         if (i == 5){
         	text1.classList.add("is_hide");
