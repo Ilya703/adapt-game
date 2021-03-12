@@ -27,7 +27,6 @@ define([
       let i = 0;
       let counter = 0;
       el.classList.remove("is_hide");
-      let set1 = ['Домашний театр','Гардероб официантов','Шубохранилище','Аквадискотека','Компьютерный клуб'];
       function game1() {
         if (i == 0 || i == 1 || i == 3){
           counter += 1;
@@ -41,7 +40,6 @@ define([
         if (i == 5){
           el = document.querySelectorAll('.text_')[i];
           el.classList.add("is_hide");
-          text.innerHTML = '';
           if (counter < 3){
             phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           } else {
@@ -62,7 +60,6 @@ define([
         el = document.querySelectorAll('.text_')[i];
         el.classList.remove("is_hide");
         if (i == 5){
-          text.innerHTML = '';
           el = document.querySelectorAll('.text_')[i];
           el.classList.add("is_hide");
           if (counter < 3){
@@ -79,7 +76,7 @@ define([
         i = 0;
         el = document.querySelectorAll('.text_')[i];
         counter = 0;
-        text.innerHTML = el.classList.remove("is_hide");
+        el.classList.remove("is_hide");
         count.innerHTML = counter;
       };
 
