@@ -30,10 +30,10 @@ define([
       function game1() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
-        if (el.dataset.istrue == TRUE){
+        if (el.dataset.istrue){
           counter += 1;
         }
-        count.innerHTML = counter;
+        count.innerHTML = typeOf(el.dataset.istrue);
         i += 1;
         if (i == 5){
         	inner.classList.add("show");
@@ -54,10 +54,10 @@ define([
       function game2() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
-        if (el.dataset.istrue == FALSE){
+        if (el.dataset.istrue){
           counter += 1;
         }
-        count.innerHTML = counter;
+        count.innerHTML = el.dataset.istrue;
         i += 1;
         if (i == 5){
         	inner.classList.add("show");
