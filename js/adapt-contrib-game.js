@@ -58,7 +58,7 @@ define([
         if (truth == false){
           counter += 1;
         }
-        count.innerHTML = counter;
+        count.innerHTML = truth;
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
         i += 1;
