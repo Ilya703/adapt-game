@@ -24,18 +24,16 @@ define([
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
-      var truth = document.querySelectorAll("data-istrue")[0];
       let i = 0;
       let counter = 0;
       el.classList.remove("is_hide");
       function game1() {
-      	truth = document.querySelectorAll("data-istrue")[i];
-        if (truth == true){
-          counter += 1;
-        }
         count.innerHTML = counter;
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
+        if (el.dataset.istrue){
+          counter += 1;
+        }
         i += 1;
         if (i == 5){
         	inner.classList.add("show");
@@ -54,13 +52,12 @@ define([
         }
       };
       function game2() {
-      	truth = document.querySelectorAll("data-istrue")[i];
-        if (truth == false){
-          counter += 1;
-        }
-        count.innerHTML = truth;
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
+        if (el.dataset.istrue){
+          counter += 1;
+        }
+        count.innerHTML = el.dataset.istrue;
         i += 1;
         if (i == 5){
         	inner.classList.add("show");
