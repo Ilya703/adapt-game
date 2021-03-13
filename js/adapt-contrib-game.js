@@ -54,7 +54,6 @@ define([
       function game2() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
-        this.model.setActiveItem(counter);
         if (el.dataset.istrue == "false"){
           counter += 1;
         }
