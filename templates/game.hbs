@@ -29,7 +29,7 @@
       		<div class="game__image question">
       			<div class="game__image pic"></div>
             {{#each _items}}
-      			 <div class="game__image text_ is_hide" data-index="{{ @index }}">{{this._text}}</div>
+      			 <div class="game__image text_ is_hide" data-isTrue="{{ this.isTrue }}">{{this._text}}</div>
             {{/each}}
       		</div>
       		<div class="game__image buttons">
