@@ -24,11 +24,13 @@ define([
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
+      var truth = document.querySelectorAll("data-istrue")[0];
       let i = 0;
       let counter = 0;
       el.classList.remove("is_hide");
       function game1() {
-        if (i == 0 || i == 1 || i == 3){
+      	truth = document.querySelectorAll("data-istrue")[i];
+        if (truth){
           counter += 1;
         }
         count.innerHTML = counter;
@@ -52,7 +54,8 @@ define([
         }
       };
       function game2() {
-        if (i == 2 || i == 4){
+      	truth = document.querySelectorAll("data-istrue")[i];
+        if (!truth){
           counter += 1;
         }
         count.innerHTML = counter;
