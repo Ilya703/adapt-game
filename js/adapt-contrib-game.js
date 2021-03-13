@@ -30,7 +30,7 @@ define([
       function game1() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
-        if (el.dataset.istrue == true){
+        if (el.dataset.istrue == TRUE){
           counter += 1;
         }
         count.innerHTML = counter;
@@ -54,7 +54,7 @@ define([
       function game2() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
-        if (el.dataset.istrue == false){
+        if (el.dataset.istrue == FALSE){
           counter += 1;
         }
         count.innerHTML = counter;
