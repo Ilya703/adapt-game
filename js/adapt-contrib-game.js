@@ -31,6 +31,7 @@ define([
       function game1() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
+        el.classList.add("is-visited");
         if (el.dataset.istrue == "true"){
           counter += 1;
         }
@@ -47,6 +48,7 @@ define([
           	num.innerHTML = `${counter} из 5`;
           	el = document.querySelectorAll(".text_")[i];
           	el.classList.add("is_hide");
+          	el.classList.add("is-visited");
         };
         if (i < 5){
         	el = document.querySelectorAll(".text_")[i];
@@ -56,6 +58,7 @@ define([
       function game2() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
+        el.classList.add("is-visited");
         if (el.dataset.istrue == "false"){
           counter += 1;
         }
@@ -72,6 +75,7 @@ define([
           	num.innerHTML = `${counter} из 5`;
           	el = document.querySelectorAll(".text_")[i];
           	el.classList.add("is_hide");
+          	el.classList.add("is-visited");
         };
         if (i < 5){
         	el = document.querySelectorAll(".text_")[i];
