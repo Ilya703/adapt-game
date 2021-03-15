@@ -21,6 +21,7 @@ define([
       var count = document.querySelector(".count");
       var el = document.querySelectorAll(".text_")[0];
       var inner = document.querySelector(".block_in");
+      var inner1 = document.querySelector(".block_in1");
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
@@ -37,6 +38,7 @@ define([
         i += 1;
         if (i == 5){
         	inner.classList.add("show");
+        	inner1.classList.add("show");
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
@@ -61,6 +63,7 @@ define([
         i += 1;
         if (i == 5){
         	inner.classList.add("show");
+        	inner1.classList.add("show");
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
@@ -77,6 +80,7 @@ define([
       };
       function more(){
         inner.classList.remove("show");
+        inner1.classList.remove("show");
         i = 0;
         el = document.querySelectorAll(".text_")[i];
         counter = 0;
