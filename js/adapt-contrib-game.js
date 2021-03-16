@@ -21,6 +21,7 @@ define([
       var count = document.querySelector(".count");
       var el = document.querySelectorAll(".text_")[0];
       var inner = document.querySelector(".block_in");
+      var game = document.querySelector(".game");
       var inner1 = document.querySelector(".block_in1");
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
@@ -39,6 +40,7 @@ define([
         if (i == 5){
         	inner.classList.add("show");
         	inner1.classList.add("show");
+        	game.classList.add("is-complete");
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
@@ -64,6 +66,7 @@ define([
         if (i == 5){
         	inner.classList.add("show");
         	inner1.classList.add("show");
+        	game.classList.add("is-complete");
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
