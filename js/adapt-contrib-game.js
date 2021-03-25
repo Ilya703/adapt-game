@@ -6,6 +6,14 @@ define([
 
   class GraphicView extends ComponentView {
 
+  	events() {
+      return {
+        'click .js-narrative-strapline-open-popup': 'openPopup',
+        'click .js-narrative-controls-click': 'onNavigationClicked',
+        'click .js-narrative-progress-click': 'onProgressClicked'
+      };
+    }
+
     preRender() {
       this.listenTo(Adapt, 'device:changed', this.resizeImage);
 
@@ -99,6 +107,11 @@ define([
       if (isResetOnRevisit) {
         this.model.reset(isResetOnRevisit);
       }
+    }
+    
+    onItemsVisitedChange(item, _isVisited) {
+      if (!_isVisited) return;
+      this.$(`[data-index="${item.get('_index')}"]`).addClass('is-visited');
     }
 
     resizeImage(width, setupInView) {
