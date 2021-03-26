@@ -10,22 +10,11 @@ define([
       this.listenTo(Adapt, 'device:changed', this.resizeImage);
 
       this.checkIfResetOnRevisit();
-
-      this.listenTo(this.model.get('_children'), {
-        'change:_isActive': this.onItemsActiveChange,
-        'change:_isVisited': this.onItemsVisitedChange
-      });
        
     }
 
     postRender() {
       this.resizeImage(Adapt.device.screenSize, true);
-
-      this.setReadyStatus();
-
-      if (this.model.get('_setCompletionOn') === 'inview') {
-        this.setupInviewCompletion();
-      }
 
       var button1 = document.querySelector(".button_1");
       var button2 = document.querySelector(".button_2");
@@ -110,11 +99,6 @@ define([
       if (isResetOnRevisit) {
         this.model.reset(isResetOnRevisit);
       }
-    }
-
-    onItemsVisitedChange(item, _isVisited) {
-      if (!_isVisited) return;
-      this.$(`[data-index="${item.get('_index')}"]`).addClass('is-visited');
     }
 
     resizeImage(width, setupInView) {
