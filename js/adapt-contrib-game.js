@@ -7,7 +7,7 @@ define([
   class GraphicView extends ComponentView {
 
     preRender() {
-
+      this.listenTo(Adapt, 'device:changed', this.resizeImage);
       this.checkIfResetOnRevisit();
        
     }
