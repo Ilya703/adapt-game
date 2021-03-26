@@ -7,14 +7,21 @@ define([
   class GraphicView extends ComponentView {
 
     preRender() {
-      this.listenTo(Adapt, 'device:changed', this.resizeImage);
+      this.listenTo(this.model.getChildren(), {
+        'change:_isActive': this.onItemsActiveChange,
+        'change:_isVisited': this.onItemsVisitedChange
+      });
 
       this.checkIfResetOnRevisit();
        
     }
 
     postRender() {
-      this.resizeImage(Adapt.device.screenSize, true);
+      this.setReadyStatus();
+
+      if (this.model.get('_setCompletionOn') === 'inview') {
+        this.setupInviewCompletion();
+      }
 
       var button1 = document.querySelector(".button_1");
       var button2 = document.querySelector(".button_2");
@@ -93,12 +100,14 @@ define([
       once_more.addEventListener("click", more);
     }
 
-    onItemsVisitedChange(item, isVisited) {
-      if (!isVisited) return;
+    onItemsActiveChange(item, _isActive) {
+      if (!_isActive) return;
+      this.setStage(item);
+    }
 
-      const $item = this.getItemElement(item);
-
-      $item.children('.text_').addClass('is-visited');
+    onItemsVisitedChange(item, _isVisited) {
+      if (!_isVisited) return;
+      this.$(`[data-index="${item.get('_index')}"]`).addClass('is-visited');
     }
 
     checkIfResetOnRevisit() {
@@ -109,15 +118,15 @@ define([
       }
     }
 
-
-    onItemsVisitedChange(item, _isVisited) {
-      if (!_isVisited) return;
-      this.$(`[data-index="${item.get('_index')}"]`).addClass('is-visited');
-    }
-
     evaluateCompletion() {
       if (this.model.areAllItemsCompleted()) {
         this.trigger('allItems');
+      }
+    }
+
+    setupEventListeners() {
+      if (this.model.get('_setCompletionOn') === 'inview') {
+        this.setupInviewCompletion('.component__widget');
       }
     }
 
