@@ -109,6 +109,17 @@ define([
       }
     }
 
+    onItemsVisitedChange(item, _isVisited) {
+      if (!_isVisited) return;
+      this.$(`[data-index="${item.get('_index')}"]`).addClass('is-visited');
+    }
+
+    evaluateCompletion() {
+      if (this.model.areAllItemsCompleted()) {
+        this.trigger('allItems');
+      }
+    }
+
     resizeImage(width, setupInView) {
       const imageWidth = width === 'medium' ? 'small' : width;
       const imageSrc = (this.model.get('_game')) ? this.model.get('_game')[imageWidth] : '';
