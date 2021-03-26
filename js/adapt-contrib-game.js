@@ -118,12 +118,6 @@ define([
       }
     }
 
-    evaluateCompletion() {
-      if (this.model.areAllItemsCompleted()) {
-        this.trigger('allItems');
-      }
-    }
-
     resizeImage(width, setupInView) {
       const imageWidth = width === 'medium' ? 'small' : width;
       const imageSrc = (this.model.get('_game')) ? this.model.get('_game')[imageWidth] : '';
