@@ -7,6 +7,8 @@ define([
   class GraphicView extends ComponentView {
 
     preRender() {
+      this.listenTo(Adapt, 'device:changed', this.resizeImage);
+
       this.checkIfResetOnRevisit();
 
       this.model.resetActiveItems();
@@ -19,11 +21,7 @@ define([
     }
 
     postRender() {
-      this.setReadyStatus();
-
-      if (this.model.get('_setCompletionOn') === 'inview') {
-        this.setupInviewCompletion();
-      }
+      this.resizeImage(Adapt.device.screenSize, true);
 
       var button1 = document.querySelector(".button_1");
       var button2 = document.querySelector(".button_2");
