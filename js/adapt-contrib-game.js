@@ -7,10 +7,6 @@ define([
   class GraphicView extends ComponentView {
 
     preRender() {
-      this.listenTo(this.model.getChildren(), {
-        'change:_isActive': this.onItemsActiveChange,
-        'change:_isVisited': this.onItemsVisitedChange
-      });
 
       this.checkIfResetOnRevisit();
        
@@ -18,10 +14,6 @@ define([
 
     postRender() {
       this.setReadyStatus();
-
-      if (this.model.get('_setCompletionOn') === 'inview') {
-        this.setupInviewCompletion();
-      }
 
       var button1 = document.querySelector(".button_1");
       var button2 = document.querySelector(".button_2");
@@ -98,16 +90,6 @@ define([
       button1.addEventListener("click", game1);
       button2.addEventListener("click", game2);
       once_more.addEventListener("click", more);
-    }
-
-    onItemsActiveChange(item, _isActive) {
-      if (!_isActive) return;
-      this.setStage(item);
-    }
-
-    onItemsVisitedChange(item, _isVisited) {
-      if (!_isVisited) return;
-      this.$(`[data-index="${item.get('_index')}"]`).addClass('is-visited');
     }
 
     checkIfResetOnRevisit() {
