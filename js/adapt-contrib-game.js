@@ -14,11 +14,7 @@ define([
     }
 
     postRender() {
-      this.setReadyStatus();
-
-      if (this.model.get('_setCompletionOn') === 'inview') {
-        this.setupInviewCompletion();
-      }
+      this.resizeImage(Adapt.device.screenSize, true);
 
       var button1 = document.querySelector(".button_1");
       var button2 = document.querySelector(".button_2");
@@ -95,6 +91,14 @@ define([
       button1.addEventListener("click", game1);
       button2.addEventListener("click", game2);
       once_more.addEventListener("click", more);
+    }
+
+    onItemsVisitedChange(item, isVisited) {
+      if (!isVisited) return;
+
+      const $item = this.getItemElement(item);
+
+      $item.children('.text_').addClass('is-visited');
     }
 
     checkIfResetOnRevisit() {
