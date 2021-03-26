@@ -124,12 +124,6 @@ define([
       }
     }
 
-    setupEventListeners() {
-      if (this.model.get('_setCompletionOn') === 'inview') {
-        this.setupInviewCompletion('.component__widget');
-      }
-    }
-
     resizeImage(width, setupInView) {
       const imageWidth = width === 'medium' ? 'small' : width;
       const imageSrc = (this.model.get('_game')) ? this.model.get('_game')[imageWidth] : '';
