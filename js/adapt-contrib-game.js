@@ -112,6 +112,11 @@ define([
       }
     }
 
+    onItemsVisitedChange(item, _isVisited) {
+      if (!_isVisited) return;
+      this.$(`[data-index="${item.get('_index')}"]`).addClass('is-visited');
+    }
+
     resizeImage(width, setupInView) {
       const imageWidth = width === 'medium' ? 'small' : width;
       const imageSrc = (this.model.get('_game')) ? this.model.get('_game')[imageWidth] : '';
