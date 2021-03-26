@@ -10,6 +10,11 @@ define([
       this.listenTo(Adapt, 'device:changed', this.resizeImage);
 
       this.checkIfResetOnRevisit();
+
+      this.listenTo(this.model.get('_children'), {
+        'change:_isActive': this.onItemsActiveChange,
+        'change:_isVisited': this.onItemsVisitedChange
+      });
        
     }
 
