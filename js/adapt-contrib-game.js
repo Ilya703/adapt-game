@@ -14,7 +14,11 @@ define([
     }
 
     postRender() {
-      this.resizeImage(Adapt.device.screenSize, true);
+      this.setReadyStatus();
+
+      if (this.model.get('_setCompletionOn') === 'inview') {
+        this.setupInviewCompletion();
+      }
 
       var button1 = document.querySelector(".button_1");
       var button2 = document.querySelector(".button_2");
@@ -93,20 +97,17 @@ define([
       once_more.addEventListener("click", more);
     }
 
-    onItemsVisitedChange(item, isVisited) {
-      if (!isVisited) return;
-
-      const $item = this.getItemElement(item);
-
-      $item.children('.text_').addClass('is-visited');
-    }
-
     checkIfResetOnRevisit() {
       const isResetOnRevisit = this.model.get('_isResetOnRevisit');
 
       if (isResetOnRevisit) {
         this.model.reset(isResetOnRevisit);
       }
+    }
+
+    onItemsActiveChange(item, _isActive) {
+      if (!_isActive) return;
+      this.setStage(item);
     }
 
     onItemsVisitedChange(item, _isVisited) {
