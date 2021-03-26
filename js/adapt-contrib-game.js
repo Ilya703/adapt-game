@@ -109,10 +109,6 @@ define([
       }
     }
 
-    onItemsActiveChange(item, _isActive) {
-      if (!_isActive) return;
-      this.setStage(item);
-    }
 
     onItemsVisitedChange(item, _isVisited) {
       if (!_isVisited) return;
