@@ -13,7 +13,6 @@ define([
     }
 
     postRender() {
-      this.setReadyStatus();
 
       var button1 = document.querySelector(".button_1");
       var button2 = document.querySelector(".button_2");
