@@ -30,9 +30,10 @@ define([
       let m = 0;
       let counter = 0;
       el.classList.remove("is_hide");
-      while m != 1:
+      while (m != 1){
       	progress.classList.add("is_incomplete");
       	progress.classList.remove("is_complete");
+      }
       function game1() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
