@@ -37,20 +37,20 @@ define([
         count.innerHTML = counter;
         i += 1;
         if (i == 5){
-          inner.classList.add("show");
-          inner1.classList.add("show");
-            if (counter < 3){
-              phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
-            } else {
-              phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
-            };
-            num.innerHTML = `${counter} из 5`;
-            el = document.querySelectorAll(".text_")[i];
-            el.classList.add("is_hide");
+        	inner.classList.add("show");
+        	inner1.classList.add("show");
+          	if (counter < 3){
+            	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
+          	} else {
+            	phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
+          	};
+          	num.innerHTML = `${counter} из 5`;
+          	el = document.querySelectorAll(".text_")[i];
+          	el.classList.add("is_hide");
         };
         if (i < 5){
-          el = document.querySelectorAll(".text_")[i];
-          el.classList.remove("is_hide");
+        	el = document.querySelectorAll(".text_")[i];
+        	el.classList.remove("is_hide");
         }
       };
       function game2() {
@@ -62,20 +62,20 @@ define([
         count.innerHTML = counter;
         i += 1;
         if (i == 5){
-          inner.classList.add("show");
-          inner1.classList.add("show");
-            if (counter < 3){
-              phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
-            } else {
-              phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
-            };
-            num.innerHTML = `${counter} из 5`;
-            el = document.querySelectorAll(".text_")[i];
-            el.classList.add("is_hide");
+        	inner.classList.add("show");
+        	inner1.classList.add("show");
+          	if (counter < 3){
+            	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
+          	} else {
+            	phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
+          	};
+          	num.innerHTML = `${counter} из 5`;
+          	el = document.querySelectorAll(".text_")[i];
+          	el.classList.add("is_hide");
         };
         if (i < 5){
-          el = document.querySelectorAll(".text_")[i];
-          el.classList.remove("is_hide");
+        	el = document.querySelectorAll(".text_")[i];
+        	el.classList.remove("is_hide");
         }
       };
       function more(){
