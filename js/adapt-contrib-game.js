@@ -40,8 +40,6 @@ define([
         if (i == 5){
         	inner.classList.add("show");
         	inner1.classList.add("show");
-        	progress.classList.add("is_complete");
-        	m = 1;
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
@@ -67,8 +65,6 @@ define([
         if (i == 5){
         	inner.classList.add("show");
         	inner1.classList.add("show");
-        	progress.classList.add("is_complete");
-        	m = 1;
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
