@@ -26,7 +26,6 @@ define([
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
       let i = 0;
-      let m = 0;
       let counter = 0;
       el.classList.remove("is_hide");
       function game1() {
