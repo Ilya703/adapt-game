@@ -9,12 +9,6 @@ define([
     preRender() {
       this.listenTo(Adapt, 'device:changed', this.resizeImage);
 
-      this.listenTo(this.model.getChildren(), {
-        'change:_isActive': this.onItemsActiveChange,
-        'change:_isVisited': this.onItemsVisitedChange
-      });
-
-
       this.checkIfResetOnRevisit();
        
     }
@@ -37,7 +31,6 @@ define([
       function game1() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
-        el.classList.add("is_visited");
         if (el.dataset.istrue == "true"){
           counter += 1;
         }
@@ -54,18 +47,15 @@ define([
           	num.innerHTML = `${counter} из 5`;
           	el = document.querySelectorAll(".text_")[i];
           	el.classList.add("is_hide");
-          	el.classList.add("is_visited");
         };
         if (i < 5){
         	el = document.querySelectorAll(".text_")[i];
         	el.classList.remove("is_hide");
-        	el.classList.add("is_visited");
         }
       };
       function game2() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
-        el.classList.add("is_visited");
         if (el.dataset.istrue == "false"){
           counter += 1;
         }
@@ -82,12 +72,10 @@ define([
           	num.innerHTML = `${counter} из 5`;
           	el = document.querySelectorAll(".text_")[i];
           	el.classList.add("is_hide");
-          	el.classList.add("is_visited");
         };
         if (i < 5){
         	el = document.querySelectorAll(".text_")[i];
         	el.classList.remove("is_hide");
-        	el.classList.add("is_visited");
         }
       };
       function more(){
