@@ -1,20 +1,32 @@
 define([
-  'core/js/adapt',
-  'core/js/views/componentView',
-  'core/js/models/componentModel'
-], function(Adapt, ComponentView, ComponentModel) {
+  'core/js/views/componentView'
+], function(ComponentView) {
 
-  class GraphicView extends ComponentView {
+  class GameView extends ComponentView {
+
+    events() {
+      return {
+        'click .js-toggle-item': 'onClick'
+      };
+    }
 
     preRender() {
-      this.listenTo(Adapt, 'device:changed', this.resizeImage);
-
       this.checkIfResetOnRevisit();
-       
+
+      this.model.resetActiveItems();
+
+      this.listenTo(this.model.get('_children'), {
+        'change:_isActive': this.onItemsActiveChange,
+        'change:_isVisited': this.onItemsVisitedChange
+      });
     }
 
     postRender() {
-      this.resizeImage(Adapt.device.screenSize, true);
+      this.setReadyStatus();
+
+      if (this.model.get('_setCompletionOn') === 'inview') {
+        this.setupInviewCompletion();
+      }
 
       var button1 = document.querySelector(".button_1");
       var button2 = document.querySelector(".button_2");
@@ -96,30 +108,55 @@ define([
     checkIfResetOnRevisit() {
       const isResetOnRevisit = this.model.get('_isResetOnRevisit');
 
+      // If reset is enabled set defaults
       if (isResetOnRevisit) {
         this.model.reset(isResetOnRevisit);
       }
     }
 
-    resizeImage(width, setupInView) {
-      const imageWidth = width === 'medium' ? 'small' : width;
-      const imageSrc = (this.model.get('_game')) ? this.model.get('_game')[imageWidth] : '';
-      this.$('.js-game-set-image-src').attr('src', imageSrc);
-
-      this.$('.game__widget').imageready(() => {
-        this.setReadyStatus();
-
-        if (setupInView) {
-          this.setupInviewCompletion('.game__widget');
-        }
-      });
+    onClick(event) {
+      this.model.toggleItemsState($(event.currentTarget).parent().data('index'));
     }
+
+    onItemsActiveChange(item, isActive) {
+      this.toggleItem(item, isActive);
+    }
+
+    onItemsVisitedChange(item, isVisited) {
+      if (!isVisited) return;
+
+      const $item = this.getItemElement(item);
+
+      $item.children('.text_').addClass('is-visited');
+    }
+
+    toggleItem(item, shouldExpand) {
+      const $item = this.getItemElement(item);
+      const $body = $item.children('.text_').stop(true, true);
+
+      $item.children('.text_')
+        .toggleClass('is-selected is-open', shouldExpand)
+        .toggleClass('is-closed', !shouldExpand)
+        .attr('aria-expanded', shouldExpand);
+
+      if (!shouldExpand) {
+        $body.slideUp(this.model.get('_toggleSpeed'));
+        return;
+      }
+
+      $body.slideDown(this.model.get('_toggleSpeed'));
+    }
+
+    getItemElement(item) {
+      const index = item.get('_index');
+
+      return this.$('.text_').filter(`[data-index="${index}"]`);
+    }
+
   }
 
-  GraphicView.template = 'game';
+  AccordionView.template = 'game';
 
-  return Adapt.register('game', {
-    model: ComponentModel.extend({}),// create a new class in the inheritance chain so it can be extended per component type if necessary later
-    view: GraphicView
-  });
+  return GameView;
+
 });
