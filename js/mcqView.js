@@ -14,21 +14,6 @@ define([
 
      isCorrectAnswerShown: false,
 
-    setupQuestion: function() {
-      this.model.setupRandomisation();
-    },
-
-    onQuestionRendered: function() {
-      this.setReadyStatus();
-      this.update();
-    },
-
-    onKeyPress: function(event) {
-      if (event.which !== 13) return;
-      //<ENTER> keypress
-      this.onItemSelect(event);
-    },
-
     onItemFocus: function(event) {
       if (!this.model.isInteractive()) return;
 
