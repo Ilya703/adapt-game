@@ -1,9 +1,9 @@
 define([
   'core/js/adapt',
-  'core/js/views/gameView'
-], function(Adapt, GameView) {
+  'core/js/views/questionView'
+], function(Adapt, QuestionView) {
 
-  var McqView = GameView.extend({
+  var McqView = QuestionView.extend({
 
     events: {
       'focus .js-item-input': 'onItemFocus',
@@ -170,6 +170,6 @@ define([
 
   });
 
-  return GameView;
+  return McqView;
 
 });
