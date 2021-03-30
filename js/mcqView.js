@@ -14,26 +14,6 @@ define([
 
      isCorrectAnswerShown: false,
 
-    // Blank method to add functionality for when the user cannot submit
-    // Could be used for a popup or explanation dialog/hint
-    onCannotSubmit: function() {},
-
-    // This is important and should give the user feedback on how they answered the question
-    // Normally done through ticks and crosses by adding classes
-    showMarking: function() {
-      this.update();
-    },
-
-    // Used by the question view to reset the look and feel of the component.
-    resetQuestion: function() {
-      this.model.resetActiveItems();
-      this.model.resetItems();
-    },
-
-    showCorrectAnswer: function() {
-      this.isCorrectAnswerShown = true;
-      this.update();
-    },
 
     hideCorrectAnswer: function() {
       this.isCorrectAnswerShown = false;
