@@ -14,40 +14,6 @@ define([
 
      isCorrectAnswerShown: false,
 
-
-    hideCorrectAnswer: function() {
-      this.isCorrectAnswerShown = false;
-      this.update();
-    },
-
-    update: function() {
-      this.updateSelection();
-      this.updateMarking();
-    },
-
-    updateSelection: function() {
-
-      var isEnabled = this.model.get("_isEnabled");
-
-      this.model.getChildren().each(function(itemModel) {
-
-        var isSelected = this.isCorrectAnswerShown ?
-            itemModel.get("_shouldBeSelected") :
-            itemModel.get("_isActive");
-
-        var index = itemModel.get('_index');
-        this.$('.js-item-label').filter('[data-adapt-index="' + index + '"]')
-            .toggleClass('is-selected', isSelected)
-            .toggleClass('is-disabled', !isEnabled);
-
-        this.$('.js-item-input').filter('[data-adapt-index="' + index + '"]')
-            .prop('checked', isSelected)
-            .prop('disabled', !isEnabled);
-
-      }.bind(this));
-
-    },
-
     updateMarking: function() {
 
       var isInteractive = this.model.isInteractive();
