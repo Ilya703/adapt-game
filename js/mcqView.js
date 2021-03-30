@@ -14,12 +14,6 @@ define([
 
      isCorrectAnswerShown: false,
 
-    
-
-    resetQuestionOnRevisit: function() {
-      this.resetQuestion();
-    },
-
     setupQuestion: function() {
       this.model.setupRandomisation();
     },
