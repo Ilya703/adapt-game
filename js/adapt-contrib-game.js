@@ -35,6 +35,7 @@ define([
           counter += 1;
         }
         count.innerHTML = counter;
+        this.setupInviewCompletion('.component__widget');
         i += 1;
         if (i == 5){
         	inner.classList.add("show");
@@ -92,36 +93,6 @@ define([
       button2.addEventListener("click", game2);
       once_more.addEventListener("click", more);
     }
-
-    checkIfResetOnRevisit() {
-      const isResetOnRevisit = this.model.get('_isResetOnRevisit');
-
-      if (isResetOnRevisit) {
-        this.model.reset(isResetOnRevisit);
-      }
-    }
-     setupEventListeners: function() {
-      this.completionEvent = (this.model.get('_setCompletionOn') || 'play');
-
-      if (this.completionEvent === 'inview') {
-        this.setupInviewCompletion('.component__widget');
-      }
-
-      // wrapper to check if preventForwardScrubbing is turned on.
-      if ((this.model.get('_preventForwardScrubbing')) && (!this.model.get('_isComplete'))) {
-        $(this.mediaElement).on({
-          'seeking': this.onMediaElementSeeking,
-          'timeupdate': this.onMediaElementTimeUpdate
-        });
-      }
-
-      // handle other completion events in the event Listeners
-      $(this.mediaElement).on({
-        'play': this.onMediaElementPlay,
-        'pause': this.onMediaElementPause,
-        'ended': this.onMediaElementEnded
-      });
-    },
 
     resizeImage(width, setupInView) {
       const imageWidth = width === 'medium' ? 'small' : width;
