@@ -170,6 +170,6 @@ define([
 
   });
 
-  return McqView;
+  return GameView;
 
 });
