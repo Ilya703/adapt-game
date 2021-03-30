@@ -100,6 +100,28 @@ define([
         this.model.reset(isResetOnRevisit);
       }
     }
+     setupEventListeners: function() {
+      this.completionEvent = (this.model.get('_setCompletionOn') || 'play');
+
+      if (this.completionEvent === 'inview') {
+        this.setupInviewCompletion('.component__widget');
+      }
+
+      // wrapper to check if preventForwardScrubbing is turned on.
+      if ((this.model.get('_preventForwardScrubbing')) && (!this.model.get('_isComplete'))) {
+        $(this.mediaElement).on({
+          'seeking': this.onMediaElementSeeking,
+          'timeupdate': this.onMediaElementTimeUpdate
+        });
+      }
+
+      // handle other completion events in the event Listeners
+      $(this.mediaElement).on({
+        'play': this.onMediaElementPlay,
+        'pause': this.onMediaElementPause,
+        'ended': this.onMediaElementEnded
+      });
+    },
 
     resizeImage(width, setupInView) {
       const imageWidth = width === 'medium' ? 'small' : width;
