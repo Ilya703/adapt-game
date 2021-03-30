@@ -1,26 +1,26 @@
 {
-  "name": "adapt-contrib-mcq",
-  "version": "4.0.1",
-  "framework": ">=5",
+  "name": "adapt-contrib-game",
+  "version": "4.1.0",
+  "framework": ">=5.5",
   "homepage": "https://github.com/Ilya703/adapt-game",
   "issues": "https://github.com/Ilya703/adapt-game/issues/new",
-  "component": "mcq",
-  "displayName": "Multiple Choice Question",
-  "description": "A multiple choice question component",
-  "main": "/js/adapt-contrib-mcq.js",
+  "component": "text",
+  "displayName": "game",
+  "description": "A simple core contributed text component",
+  "main": "/js/adapt-contrib-game.js",
   "keywords": [
     "adapt-plugin",
     "adapt-component"
   ],
   "license": "GPL-3.0",
-  "_release": "4.0.1",
+  "_release": "4.1.0",
   "_resolution": {
     "type": "version",
-    "tag": "v4.0.1",
-    "commit": "98a0a4a44435bbe83e274cd30638c25aa923a6a5"
+    "tag": "v4.1.0",
+    "commit": "98e2fc7ba76d209280760b0dd07cce00c1590dab"
   },
   "_source": "git://github.com/Ilya703/adapt-game.git",
-  "_target": "4.0.1",
-  "_originalSource": "adapt-contrib-mcq",
+  "_target": "4.1.0",
+  "_originalSource": "adapt-contrib-game",
   "_direct": true
 }

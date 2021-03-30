@@ -1,0 +1,267 @@
+.pic{
+	height : 42px;
+	width : 42px;
+	margin: 0 auto;
+	background: url(../course/en/images/pic.png);
+	margin-top:70px;
+}
+.game_1{
+	height: 518px;
+  	width: 100%;
+  	background: #f2f2f2;
+  	padding-top: 45px;
+}
+.block_1{
+	width: 650px;
+  	height: 428px;
+  	border-radius: 10px;
+  	border: 0.5px solid #bbb3b3;
+  	background: #fff;
+  	margin: 0 auto;
+}
+.question{
+	border: 1px solid rgba(0, 0, 0, 0.1);
+  	border-radius: 2px;
+  	background: #f2f2f2;
+  	width: 420px;
+  	height: 236px;
+  	margin:0 auto;
+  	cursor: grab;
+    align-items: center;
+}
+.text_{
+  font-weight: 600;
+  font-size: 21px;
+  letter-spacing: 0px;
+  text-align: center;
+  line-height: 28px;
+  margin-top: 20px;
+}
+.is_hide{
+  display: none;
+}
+.buttons{
+  	display:flex;
+  	width: 424px;
+  	margin:0 auto;
+  	margin-top: 30px;
+}
+.button_1{
+	display: block;
+	width: 207px;
+	height: 42px;
+	background: #36CDE8;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+	line-height: 16px;
+	padding: 12px 18px 6px;
+	text-transform: uppercase;
+	border-radius: 8px;
+	font-weight: 600;
+}
+.button_2{
+  	display: block;
+  	width: 207px;
+  	height: 42px;
+  	background: #36CDE8;
+  	text-align: center;
+ 	  cursor: pointer;
+ 	  color: #fff;
+  	line-height: 16px;
+  	padding: 12px 18px 6px;
+  	text-transform: uppercase;
+  	border-radius: 8px;
+  	margin-left: 15px;
+  	font-weight: 600;
+}
+.button_1:hover{
+  	background: #1c92a7;
+  	transition: 0.5s;
+}
+.button_2:hover{
+  	background: #1c92a7;
+  	transition: 0.5s;
+}
+.usage{
+  	font-size: 12px;
+  	color: rgb(113, 113, 113);
+  	letter-spacing: 0px;
+  	line-height: 14px;
+  	max-width: 420px;
+  	text-align: center;
+  	white-space: pre-line;
+  	font-weight: 400;
+  	display:block;
+  	width: 400px;
+  	margin:0 auto;
+  	margin-top: 12px;
+}
+.count{
+  	text-transform: uppercase;
+  	margin-top: 25px;
+  	margin-bottom: 15px;
+  	width: 10px;
+}
+.count-text{
+  	text-transform: uppercase;
+  	margin-top: 25px;
+  	margin-bottom: 15px;
+  	width: 50px;
+    margin-right: 10px;
+}
+.block_in{
+    width: 650px;
+    height: 428px;
+    position: absolute;
+    border-radius: 10px;
+    border: 0.5px solid #bbb3b3;
+    background: #fff;
+    margin: 0 auto;
+    padding: 25px;
+    z-index: -1;
+    opacity: 0;
+    margin-left: -1px;
+    margin-top: -1px;
+    transition-duration: 0.5s;
+}
+.block_in1{
+    width: 650px;
+    height: 428px;
+    position: absolute;
+    border-radius: 10px;
+    border: 0.5px solid #bbb3b3;
+    margin: 0 auto;
+    padding: 25px;
+    z-index: -1;
+    opacity: 0;
+    margin-left: -1px;
+    margin-top: -1px;
+    transition-duration: 0.5s;
+}
+.pic1{
+    height: 315px;
+    width: 100%;
+    background: url(https://meduza.io/image/attachments/images/006/364/275/large/bMeGi7SQBFu-DJ3i5xZ3ow.jpg);
+}
+.result{
+    height: 315px;
+    width: 100%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.text_in{
+    line-height: 16px;
+    color: rgb(255, 255, 255);
+    opacity: 0.8;
+    margin-left: 35px;
+    padding-top: 110px;
+}
+.box{
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 21px 20px 20px;
+    margin-top: 5px;
+    width: 530px;
+    height: 130px;
+    margin-left: 35px;
+}
+.num{
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0px;
+}
+.phrase{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0px;
+    margin-top: 9px;
+}
+.once_more{
+    line-height: 18px;
+    text-decoration: underline;
+    cursor: pointer;
+    display: block;
+    margin-left: 8px;
+}
+.show{
+  opacity: 1;
+  z-index: 2;
+}
+/*Responsive*/
+
+
+/* 780px - 980px */
+@media screen and (max-width: 980px) {
+  .block_1{
+    width: 90%;
+  }
+  .block_in{
+    width: 90%;
+  }
+  .block_in1{
+    width: 90%;
+  }
+  .box{
+    width: 90%;
+    height: 130px;
+    margin: 0 auto;
+  }
+}
+/* 590px - 780px */
+@media screen and (max-width: 768px) {
+}
+/* 460px - 590px */
+@media screen and (max-width: 590px) {
+  .button_1{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .button_2{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .buttons{
+    display: block;
+    margin-top: 10px;
+  }
+  .question{
+    width: 90%;
+  }
+  .phrase{
+    font-size: 14px;
+    text-align: center;
+  }
+  .num{
+    font-size: 18px;
+    margin: 0 auto;
+    display: block;
+    width: 50px;
+  }
+  .buttons{
+    width: 90%;
+  }
+  .text_in{
+    padding-top: 0;
+    opacity: 0;
+  }
+  .box{
+    height: 200px;
+    margin-top:35px; 
+  }
+}
+/* 320px - 460px */
+@media screen and (max-width: 460px) {
+  .button_1{
+    font-size: 12px;
+    padding: 12px 8px 6px;
+  }
+  .button_2{
+    font-size: 12px;
+    padding: 12px 8px 6px;
+  }
+}
