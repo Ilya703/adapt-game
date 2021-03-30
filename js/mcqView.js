@@ -14,16 +14,7 @@ define([
 
      isCorrectAnswerShown: false,
 
-    initialize: function() {
-      QuestionView.prototype.initialize.apply(this, arguments);
-      this.update = _.debounce(this.update.bind(this), 1);
-      this.listenTo(this.model, {
-        "change:_isEnabled change:_isComplete change:_isSubmitted": this.update
-      });
-      this.listenTo(this.model.getChildren(), {
-        "change:_isActive": this.update
-      });
-    },
+    
 
     resetQuestionOnRevisit: function() {
       this.resetQuestion();
