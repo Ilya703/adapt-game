@@ -14,36 +14,6 @@ define([
 
      isCorrectAnswerShown: false,
 
-    onItemFocus: function(event) {
-      if (!this.model.isInteractive()) return;
-
-      this.$('.js-item-label[for='+$(event.currentTarget).attr('id')+']').addClass('is-highlighted');
-    },
-
-    onItemBlur: function(event) {
-      this.$('.js-item-label[for='+$(event.currentTarget).attr('id')+']').removeClass('is-highlighted');
-    },
-
-    onItemSelect: function(event) {
-      if (!this.model.isInteractive()) return;
-
-      var index = $(event.currentTarget).data('adapt-index');
-      var itemModel = this.model.getItem(index);
-      var shouldSelect = !itemModel.get("_isActive");
-
-      if (this.model.isSingleSelect()) {
-        // Assume a click is always a selection
-        shouldSelect = true;
-        this.model.resetActiveItems();
-      } else if (shouldSelect && this.model.isAtActiveLimit()) {
-        // At the selection limit, deselect the last item
-        this.model.getLastActiveItem().toggleActive(false);
-      }
-
-      // Select or deselect accordingly
-      itemModel.toggleActive(shouldSelect);
-    },
-
     // Blank method to add functionality for when the user cannot submit
     // Could be used for a popup or explanation dialog/hint
     onCannotSubmit: function() {},
