@@ -95,11 +95,6 @@ define([
       button1.addEventListener("click", game1);
       button2.addEventListener("click", game2);
       once_more.addEventListener("click", more);
-      this.setReadyStatus();
-
-      if (this.model.get('_setCompletionOn') === 'inview') {
-        this.setupInviewCompletion();
-      }
     }
 
     resizeImage(width, setupInView) {
@@ -114,6 +109,17 @@ define([
           this.setupInviewCompletion('.game__widget');
         }
       });
+    }
+    onItemsActiveChange(item, isActive) {
+      this.toggleItem(item, isActive);
+    }
+
+    onItemsVisitedChange(item, isVisited) {
+      if (!isVisited) return;
+
+      const $item = this.getItemElement(item);
+
+      $item.children('.accordion__item-btn').addClass('is-visited');
     }
   }
   GraphicView.template = 'game';
