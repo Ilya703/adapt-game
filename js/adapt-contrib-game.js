@@ -7,8 +7,6 @@ define([
   class GraphicView extends ComponentView {
 
     preRender() {
-      this.checkIfResetOnRevisit();
-
       this.model.resetActiveItems();
 
       this.listenTo(this.model.get('_children'), {
