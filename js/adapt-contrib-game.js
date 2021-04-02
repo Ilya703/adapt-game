@@ -119,7 +119,7 @@ define([
 
       const $item = this.getItemElement(item);
 
-      $item.children('.accordion__item-btn').addClass('is-visited');
+      $item.children('.game__item').addClass('is-visited');
     }
   }
   GraphicView.template = 'game';
