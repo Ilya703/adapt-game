@@ -28,6 +28,8 @@ define([
       el.classList.remove("is_hide");
       progress.classList.remove("is-complete");
       progress1.classList.remove("is-complete");
+      progress.classList.remove("is-incomplete");
+      progress1.classList.remove("is-incomplete");
       function game1() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
@@ -43,6 +45,8 @@ define([
         	inner1.classList.add("show");
           progress.classList.add("is-complete");
           progress1.classList.add("is-complete");
+          progress.classList.remove("is-incomplete");
+          progress1.classList.remove("is-incomplete");
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
