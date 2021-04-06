@@ -21,9 +21,13 @@ define([
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
+      var progress = document.querySelector(".game__title .js-heading");
+      var progress1 = document.querySelector(".game__title .pagelevelprogress__indicator");
       let i = 0;
       let counter = 0;
       el.classList.remove("is_hide");
+      progress.classList.remove("is_complete");
+      progress1.classList.remove("is_complete");
       function game1() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
@@ -32,9 +36,13 @@ define([
         }
         count.innerHTML = counter;
         i += 1;
+        progress.classList.remove("is_complete");
+        progress1.classList.remove("is_complete");
         if (i == 5){
         	inner.classList.add("show");
         	inner1.classList.add("show");
+          progress.classList.add("is_complete");
+          progress1.classList.add("is_complete");
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
@@ -57,9 +65,13 @@ define([
         }
         count.innerHTML = counter;
         i += 1;
+        progress.classList.remove("is_complete");
+        progress1.classList.remove("is_complete");
         if (i == 5){
         	inner.classList.add("show");
         	inner1.classList.add("show");
+          progress.classList.add("is_complete");
+          progress1.classList.add("is_complete");
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
