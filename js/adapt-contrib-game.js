@@ -44,7 +44,6 @@ define([
             	phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
           	};
           	num.innerHTML = `${counter} из 5`;
-          	el = document.querySelectorAll(".text_")[i];
           	el.classList.add("is_hide");
         };
         if (i < 5){
@@ -70,7 +69,6 @@ define([
             	phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
           	};
           	num.innerHTML = `${counter} из 5`;
-          	el = document.querySelectorAll(".text_")[i];
           	el.classList.add("is_hide");
         };
         if (i < 5){
