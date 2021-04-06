@@ -22,12 +22,12 @@ define([
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
       let m = 0;
-      var d = document.querySelector(".drawer .pagelevelprogress__item-btn")[m];
+      var d = document.querySelector(".pagelevelprogress__item-btn")[0];
       while (d.getAttribute(aria-label) != " Incomplete. Game"){
         m += 1
-        d = document.querySelector(".drawer .pagelevelprogress__item-btn")[m];
+        d = document.querySelector(".pagelevelprogress__item-btn")[m];
       }
-      var progress1 = document.querySelector(`. + ${d} + .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__item-btn`);
+      var progress1 = document.querySelector(`.${d} .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__item-btn`);
       var progress = document.querySelector(".game__title .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar");
       let i = 0;
       progress1.classList.add("w");
