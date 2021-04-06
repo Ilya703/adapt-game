@@ -21,8 +21,16 @@ define([
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
+      let m = 0;
+      var d = document.querySelector(".drawer .pagelevelprogress__item-btn")[m];
+      while (d.getAttribute(aria-label) != " Incomplete. Game"){
+        m += 1
+        d = document.querySelector(".drawer .pagelevelprogress__item-btn")[m];
+      }
+      var progress1 = document.querySelector(`. + ${d} + .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__item-btn`);
       var progress = document.querySelector(".game__title .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar");
       let i = 0;
+      progress1.classList.add("w");
       let counter = 0;
       el.classList.remove("is_hide");
       progress.classList.add("w");
@@ -38,6 +46,7 @@ define([
         	inner.classList.add("show");
         	inner1.classList.add("show");
           progress.classList.add("w1");
+          progress1.classList.add("w1");
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
@@ -63,6 +72,7 @@ define([
         	inner.classList.add("show");
         	inner1.classList.add("show");
           progress.classList.add("w1");
+          progress1.classList.add("w1");
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
