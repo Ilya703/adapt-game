@@ -13,7 +13,6 @@ define([
     }
 
     preRender() {
-      this.checkIfResetOnRevisit();
 
       this.model.resetActiveItems();
 
