@@ -6,8 +6,21 @@ define([
 
   class GraphicView extends ComponentView {
 
-    preRender() {
+    events() {
+      return {
+        'click .js-toggle-item': 'onClick'
+      };
+    }
 
+    preRender() {
+      this.checkIfResetOnRevisit();
+
+      this.model.resetActiveItems();
+
+      this.listenTo(this.model.get('_children'), {
+        'change:_isActive': this.onItemsActiveChange,
+        'change:_isVisited': this.onItemsVisitedChange
+      });
     }
 
     postRender() {
@@ -88,6 +101,12 @@ define([
       button1.addEventListener("click", game1);
       button2.addEventListener("click", game2);
       once_more.addEventListener("click", more);
+
+      this.setReadyStatus();
+
+      if (this.model.get('_setCompletionOn') === 'inview') {
+        this.setupInviewCompletion();
+      }
     }
 
     resizeImage(width, setupInView) {
@@ -112,7 +131,7 @@ define([
 
       const $item = this.getItemElement(item);
 
-      $item.children('.game__item').addClass('is-visited');
+      $item.children('.accordion__item-btn').addClass('is-visited');
     }
   }
   GraphicView.template = 'game';
