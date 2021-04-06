@@ -21,7 +21,7 @@ define([
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
-      var progress1 = document.querySelector('button[aria-label=" Incomplete. Game"]')
+      var progress1 = document.querySelector('.drawer__item-btn[aria-label=" Incomplete. Game"]')
       var progress = document.querySelector(".game__title .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar");
       let i = 0;
       let counter = 0;
