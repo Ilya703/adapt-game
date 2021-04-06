@@ -21,7 +21,7 @@ define([
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
-      var progress = document.querySelector(".pagelevelprogress__indicator-bar");
+      var progress = document.querySelector(".game__title .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar");
       let i = 0;
       let counter = 0;
       el.classList.remove("is_hide");
@@ -36,9 +36,8 @@ define([
         i += 1;
         if (i == 5){
         	inner.classList.add("show");
-          progress.classList.remove("w");
-          progress.classList.add("w1");
         	inner1.classList.add("show");
+          progress.classList.add("w1");
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
@@ -64,6 +63,7 @@ define([
         if (i == 5){
         	inner.classList.add("show");
         	inner1.classList.add("show");
+          progress.classList.add("w1");
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
