@@ -21,13 +21,13 @@ define([
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
-      var progress1 = document.querySelector('.drawer__item-btn [aria-label=" Incomplete. Game"]')
+      var progress1 = document.querySelectorAll('.drawer__item-btn[aria-label=" Incomplete. Game"]')
       var progress = document.querySelector(".game__title .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar");
       let i = 0;
       let counter = 0;
       el.classList.remove("is_hide");
       progress.classList.add("w");
-      progress1.classList.add("w2");
+      progress1.classList.add("w");
       function game1() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
