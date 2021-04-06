@@ -14,8 +14,6 @@ define([
 
     preRender() {
 
-      this.model.resetActiveItems();
-
       this.listenTo(this.model.get('_children'), {
         'change:_isActive': this.onItemsActiveChange,
         'change:_isVisited': this.onItemsVisitedChange
