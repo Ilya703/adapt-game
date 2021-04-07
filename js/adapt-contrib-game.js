@@ -27,7 +27,6 @@ define([
       let counter = 0;
       el.classList.remove("is_hide");
       progress.classList.add("w");
-      progress1.classList.add("w");
       function game1() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
