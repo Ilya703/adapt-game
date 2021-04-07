@@ -7,7 +7,6 @@ define([
   class GraphicView extends ComponentView {
 
     preRender() {
-      document.querySelector('[aria-label=" Incomplete. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w');
     }
 
     postRender() {
