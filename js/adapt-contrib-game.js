@@ -67,6 +67,7 @@ define([
         	inner1.classList.add("show");
           progress.classList.add("w1");
           m += 1;
+          console.log(m);
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
@@ -90,8 +91,11 @@ define([
         count.innerHTML = counter;
       };
       function progress1(){
-        console.log(document.querySelector('[aria-label=" Incomplete. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w'));
-        console.log(document.querySelector('[aria-label=" Completed. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w'));
+        if (document.querySelector('[aria-label=" Incomplete. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w') == null){
+          console.log(document.querySelector('[aria-label=" Completed. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w'));
+        } else {
+          console.log(document.querySelector('[aria-label=" Incomplete. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w'));
+        }
         if (m == 1){
           console.log(document.querySelector('[aria-label=" Completed. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w1'));
         }
