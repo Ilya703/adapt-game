@@ -21,7 +21,10 @@ define([
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
-      document.querySelector('[aria-label=" Incomplete. Game"]').classList.add('w')
+      while (1 > 0){
+        document.querySelector('[aria-label=" Incomplete. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w');
+        document.querySelector('[aria-label=" Completed. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w');
+      }
       var progress = document.querySelector(".game__title .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar");
       let i = 0;
       let counter = 0;
