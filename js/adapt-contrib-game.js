@@ -21,9 +21,10 @@ define([
       var num = document.querySelector(".num");
       var phrase = document.querySelector(".phrase");
       var once_more = document.querySelector(".once_more");
-      document.querySelector('[aria-label=" Incomplete. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w');
+      var button_p = document.querySelector(".nav__pagelevelprogress-btn");
       var progress = document.querySelector(".game__title .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar");
       let i = 0;
+      let m = 0;
       let counter = 0;
       el.classList.remove("is_hide");
       progress.classList.add("w");
@@ -39,6 +40,7 @@ define([
         	inner.classList.add("show");
         	inner1.classList.add("show");
           progress.classList.add("w1");
+          m += 1;
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
@@ -64,6 +66,7 @@ define([
         	inner.classList.add("show");
         	inner1.classList.add("show");
           progress.classList.add("w1");
+          m += 1;
           	if (counter < 3){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
@@ -86,10 +89,17 @@ define([
         el.classList.remove("is_hide");
         count.innerHTML = counter;
       };
+      function progress1(){
+        console.log(document.querySelector('[aria-label=" Incomplete. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w'));
+        if (m == 1){
+          console.log(document.querySelector('[aria-label=" Completed. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w'));
+        }
+      };
 
       button1.addEventListener("click", game1);
       button2.addEventListener("click", game2);
       once_more.addEventListener("click", more);
+      button_p.addEventListener("click", progress1);
     }
 
     resizeImage(width, setupInView) {
