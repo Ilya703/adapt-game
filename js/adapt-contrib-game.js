@@ -25,6 +25,7 @@ define([
       var progress = document.querySelector(".game__title .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar");
       let i = 0;
       let m = 0;
+      console.log(_items.length)
       let counter = 0;
       el.classList.remove("is_hide");
       progress.classList.add("w");
