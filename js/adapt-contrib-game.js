@@ -27,7 +27,7 @@ define([
       let i = 0;
       let m = 0;
       let counter = 0;
-      console.log(el1.length);
+      let p = el1.length;
       el.classList.remove("is_hide");
       progress.classList.add("w");
       function game1() {
@@ -38,20 +38,20 @@ define([
         }
         count.innerHTML = counter;
         i += 1;
-        if (i == 5){
+        if (i == p){
         	inner.classList.add("show");
         	inner1.classList.add("show");
           progress.classList.add("w1");
           m += 1;
-          	if (counter < 3){
+          	if (counter < p/2){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
             	phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
           	};
-          	num.innerHTML = `${counter} из 5`;
+          	num.innerHTML = `${counter} из ${p}`;
           	el.classList.add("is_hide");
         };
-        if (i < 5){
+        if (i < p){
         	el = document.querySelectorAll(".text_")[i];
         	el.classList.remove("is_hide");
         }
@@ -64,20 +64,20 @@ define([
         }
         count.innerHTML = counter;
         i += 1;
-        if (i == 5){
+        if (i == p){
         	inner.classList.add("show");
         	inner1.classList.add("show");
           progress.classList.add("w1");
           m += 1;
-          	if (counter < 3){
+          	if (counter < p/2){
             	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
           	} else {
             	phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
           	};
-          	num.innerHTML = `${counter} из 5`;
+          	num.innerHTML = `${counter} из ${p}`;
           	el.classList.add("is_hide");
         };
-        if (i < 5){
+        if (i < p){
         	el = document.querySelectorAll(".text_")[i];
         	el.classList.remove("is_hide");
         }
