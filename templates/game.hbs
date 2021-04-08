@@ -3,9 +3,7 @@
   {{> component this}}
 
   <div class="component__widget game__widget">
-
-    <div class="game__image-container{{#if _game.attribution}} has-attribution{{/if}}">
-
+  
       <div class="game__image game_1">
       	<div class="game__image block_1">
           <div class="game__image block_in">
@@ -41,17 +39,5 @@
       		</div>
       	</div>
       </div>
-
-      {{#if _game.attribution}}
-      <div class="component__attribution game__attribution">
-        <div class="component__attribution-inner game__attribution-inner">
-          {{{_game.attribution}}}
-        </div>
-      </div>
-      {{/if}}
-
-    </div>
-
   </div>
-
 </div>
