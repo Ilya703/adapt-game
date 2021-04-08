@@ -44,9 +44,9 @@ define([
           progress.classList.add("w1");
           m += 1;
           	if (counter < p/2){
-              phrase.innerHTML = "{{_answer1.text}}";
+              phrase.innerHTML = `${{_answer1.text}}`;
             } else {
-              phrase.innerHTML = "{{_answer2.text}}";
+              phrase.innerHTML = `${{_answer2.text}}`;
             };
           	num.innerHTML = `${counter} из ${p}`;
           	el.classList.add("is_hide");
