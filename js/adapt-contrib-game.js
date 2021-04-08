@@ -44,7 +44,9 @@ define([
         	inner.classList.add("show");
         	inner1.classList.add("show");
           progress.classList.add("w1");
-          m += 1;
+          if (m == 0) {
+            m += 1;
+          };
           	if (counter < p/2){
               phrase1.classList.remove("is_hide");
               l = 1;
@@ -72,7 +74,9 @@ define([
         	inner.classList.add("show");
         	inner1.classList.add("show");
           progress.classList.add("w1");
-          m += 1;
+          if (m == 0) {
+            m += 1;
+          };
           	if (counter < p/2){
               phrase1.classList.remove("is_hide");
               l = 1;
@@ -104,7 +108,7 @@ define([
         l = 0;
       };
       function progress1(){
-        if (m > 1){
+        if (m == 1){
           console.log(document.querySelector('[aria-label=" Completed. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w1'));
         } else {
           if (document.querySelector('[aria-label=" Incomplete. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar') == null){
