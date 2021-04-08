@@ -3,39 +3,39 @@
   {{> component this}}
 
   <div class="component__widget game__widget">
-  
-      <div class="game__image game_1">
-      	<div class="game__image block_1">
-          <div class="game__image block_in">
-            <img class="game__image pic1" src="{{_pic-background.src}}">
+
+      <div class="game_1">
+      	<div class="block_1">
+          <div class="block_in">
+            <img class="pic1" src="{{_pic-background.src}}">
           </div>
-          <div class="game__image block_in1">
-            <div class="game__image result">
-              <div class="game__image text_in">{{_note.text}}</div>
-              <div class="game__image box">
-                <div class="game__image num" id="num"></div>
-                <div class="game__image phrase is_hide" id="phrase1">{{_answer1.text}}</div>
-                <div class="game__image phrase is_hide" id="phrase2">{{_answer2.text}}</div>
+          <div class="block_in1">
+            <div class="result">
+              <div class="text_in">{{_note.text}}</div>
+              <div class="box">
+                <div class="num" id="num"></div>
+                <div class="phrase is_hide" id="phrase1">{{_answer1.text}}</div>
+                <div class="phrase is_hide" id="phrase2">{{_answer2.text}}</div>
               </div>
             </div>
             <div style="display:flex;justify-content: center;margin-top:30px;">
               <div class="arrow">&#11118;</div>
-              <div class="game__image once_more">{{_play_again.text}}</div>
+              <div class="once_more">{{_play_again.text}}</div>
             </div>
           </div>
-      		<div class="game__image" style="display:flex; justify-content: center;">
-      			<div class="game__image count-text">{{_count.text}}</div>
-      			<div class="game__image count" id="count">{{_default_count.text}}</div>
+      		<div style="display:flex; justify-content: center;">
+      			<div class="count-text">{{_count.text}}</div>
+      			<div class="count" id="count">{{_default_count.text}}</div>
       		</div>
-      		<div class="game__image question">
-      			<img class="game__image pic" src="{{_picture-small.src}}">
+      		<div class="question">
+      			<img class="pic" src="{{_picture-small.src}}">
             {{#each _items}}
-      			 <div class="game__image text_ is_hide" data-index="{{ @index }}" data-isTrue="{{ this.isTrue }}">{{this._text}}</div>
+      			 <div class="text_ is_hide" data-index="{{@index}}" data-isTrue="{{this.isTrue}}">{{this._text}}</div>
             {{/each}}
       		</div>
-      		<div class="game__image buttons">
-      			<div class="game__image button_1">{{_button1.text}}</div>
-      			<div class="game__image button_2">{{_button2.text}}</div>
+      		<div class="buttons">
+      			<div class="button_1">{{_button1.text}}</div>
+      			<div class="button_2">{{_button2.text}}</div>
       		</div>
       	</div>
       </div>
