@@ -1,50 +1,68 @@
-    {
+ {
         "_id": "c-15",
         "_parentId": "b-10",
         "_type": "component",
         "_component": "game",
         "_classes": "",
         "_layout": "full",
-        "_comment": "setCompletionOn = inview | allItems",
-        "_setCompletionOn": "allItems",
         "title": "Game",
         "displayTitle": "Game",
         "body": "",
         "instruction": "",
-        "_game": {
-            "src": "course/en/images/pic.png",
-            "alt": "",
-            "attribution": ""
+        "_picture-small": {
+            "src": "course/en/images/pic.png"
+        },
+        "_pic-background": {
+            "src": "course/en/images/pic1.jpg"
+        },
+        "_answer1": {
+            "text": "Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!"
+        },
+        "_answer2": {
+            "text": "Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле"
+        },
+        "_button1": {
+            "text": "ЭТО ЕСТЬ"
+        },
+        "_button2": {
+            "text": "ВОТ ЭТОГО НЕТ"
+        },
+        "_play_again": {
+            "text": "Играть еще раз"
+        },
+        "_count": {
+            "text": "ОЧКИ:"
+        },
+        "_default_count": {
+            "text": 0
+        },
+        "_note": {
+            "text": "Попробуйте угадать, чего нет во дворце Владимира Путина"
         },
         "_items": [
             {
                 "_text":"Домашний театр",
-                "isTrue": true,
-                "strapline": "Narrative item 1"
+                "isTrue": true
             },
             {
                 "_text":"Гардероб официантов",
-                "isTrue": true,
-                "strapline": "Narrative item 2"
+                "isTrue": true
             },
             {
                 "_text":"Шубохранилище",
-                "isTrue":false,
-                "strapline": "Narrative item 3"
+                "isTrue":false
             },
             {
                 "_text":"Аквадискотека",
-                "isTrue":true,
-                "strapline": "Narrative item 4"
+                "isTrue":true
             },
             {
                 "_text":"Компьютерный клуб",
-                "isTrue":false,
-                "strapline": "Narrative item 5"
+                "isTrue":false
             }
         ],
         "_pageLevelProgress": {
             "_isEnabled": true,
             "_isCompletionIndicatorEnabled": true
         }
-    }
+    },

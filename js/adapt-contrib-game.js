@@ -7,6 +7,9 @@ define([
   class GraphicView extends ComponentView {
 
     preRender() {
+      this.listenTo(Adapt, 'device:changed', this.resizeImage);
+
+      this.checkIfResetOnRevisit();
     }
 
     postRender() {
@@ -125,6 +128,14 @@ define([
       button_p.addEventListener("click", progress1);
     }
 
+    checkIfResetOnRevisit() {
+      const isResetOnRevisit = this.model.get('_isResetOnRevisit');
+
+      if (isResetOnRevisit) {
+        this.model.reset(isResetOnRevisit);
+      }
+    }
+    
     resizeImage(width, setupInView) {
       const imageWidth = width === 'medium' ? 'small' : width;
       const imageSrc = (this.model.get('_game')) ? this.model.get('_game')[imageWidth] : '';
