@@ -16,6 +16,7 @@ define([
       var button2 = document.querySelector(".button_2");
       var count = document.querySelector(".count");
       var el = document.querySelectorAll(".text_")[0];
+      var el1 = document.querySelectorAll(".text_");
       var inner = document.querySelector(".block_in");
       var inner1 = document.querySelector(".block_in1");
       var num = document.querySelector(".num");
@@ -25,8 +26,8 @@ define([
       var progress = document.querySelector(".game__title .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar");
       let i = 0;
       let m = 0;
-      console.log(_items.length)
       let counter = 0;
+      console.log(el1.length);
       el.classList.remove("is_hide");
       progress.classList.add("w");
       function game1() {
