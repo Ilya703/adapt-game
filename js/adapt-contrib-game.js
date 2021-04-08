@@ -44,10 +44,10 @@ define([
           progress.classList.add("w1");
           m += 1;
           	if (counter < p/2){
-            	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
-          	} else {
-            	phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
-          	};
+              phrase.innerHTML = "{{_answer1.text}}";
+            } else {
+              phrase.innerHTML = "{{_answer2.text}}";
+            };
           	num.innerHTML = `${counter} из ${p}`;
           	el.classList.add("is_hide");
         };
@@ -70,10 +70,10 @@ define([
           progress.classList.add("w1");
           m += 1;
           	if (counter < p/2){
-            	phrase.innerHTML = 'Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!';
-          	} else {
-            	phrase.innerHTML = 'Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле';
-          	};
+              phrase.innerHTML = "{{_answer1.text}}";
+            } else {
+              phrase.innerHTML = "{{_answer2.text}}";
+            };
           	num.innerHTML = `${counter} из ${p}`;
           	el.classList.add("is_hide");
         };

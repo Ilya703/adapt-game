@@ -9,34 +9,34 @@
       <div class="game__image game_1">
       	<div class="game__image block_1">
           <div class="game__image block_in">
-            <img class="game__image pic1" src="{{_pic.src}}">
+            <img class="game__image pic1" src="{{_pic-background.src}}">
           </div>
           <div class="game__image block_in1">
             <div class="game__image result">
-              <div class="game__image text_in">Попробуйте угадать, чего нет во&nbsp;дворце Владимира Путина</div>
+              <div class="game__image text_in">{{_note.text}}</div>
               <div class="game__image box">
                 <div class="game__image num" id="num"></div>
-                <div class="game__image phrase" id="phrase">Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле</div>
+                <div class="game__image phrase" id="phrase"></div>
               </div>
             </div>
             <div style="display:flex;justify-content: center;margin-top:30px;">
               <div class="arrow">&#11118;</div>
-              <div class="game__image once_more">Играть еще раз</div>
+              <div class="game__image once_more">{{_play_again.text}}</div>
             </div>
           </div>
       		<div class="game__image" style="display:flex; justify-content: center;">
-      			<div class="game__image count-text">ОЧКИ:</div>
-      			<div class="game__image count" id="count">0</div>
+      			<div class="game__image count-text">{{_count.text}}</div>
+      			<div class="game__image count" id="count">{{_default_count.text}}</div>
       		</div>
       		<div class="game__image question">
-      			<img class="game__image pic" src="{{_game.src}}">
+      			<img class="game__image pic" src="{{_picture-small.src}}">
             {{#each _items}}
       			 <div class="game__image text_ is_hide" data-index="{{ @index }}" data-isTrue="{{ this.isTrue }}">{{this._text}}</div>
             {{/each}}
       		</div>
       		<div class="game__image buttons">
-      			<div class="game__image button_1">ЭТО ЕСТЬ</div>
-      			<div class="game__image button_2">ВОТ ЭТОГО НЕТ</div>
+      			<div class="game__image button_1">{{_button1.text}}</div>
+      			<div class="game__image button_2">{{_button2.text}}</div>
       		</div>
       	</div>
       </div>
