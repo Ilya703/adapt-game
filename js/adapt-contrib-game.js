@@ -20,12 +20,14 @@ define([
       var inner = document.querySelector(".block_in");
       var inner1 = document.querySelector(".block_in1");
       var num = document.querySelector(".num");
-      var phrase = document.querySelector(".phrase");
+      var phrase1 = document.getElementById('phrase1');
+      var phrase2 = document.getElementById('phrase2');
       var once_more = document.querySelector(".once_more");
       var button_p = document.querySelector(".nav__pagelevelprogress-btn");
       var progress = document.querySelector(".game__title .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar");
       let i = 0;
       let m = 0;
+      let l = 0;
       let counter = 0;
       let p = el1.length;
       el.classList.remove("is_hide");
@@ -44,9 +46,11 @@ define([
           progress.classList.add("w1");
           m += 1;
           	if (counter < p/2){
-              phrase.innerHTML = `{{_answer1.text}}`;
+              phrase1.classList.remove("is_hide");
+              l = 1;
             } else {
-              phrase.innerHTML = `{{_answer2.text}}`;
+              phrase2.classList.remove("is_hide");
+              l = 2;
             };
           	num.innerHTML = `${counter} из ${p}`;
           	el.classList.add("is_hide");
@@ -70,9 +74,11 @@ define([
           progress.classList.add("w1");
           m += 1;
           	if (counter < p/2){
-              phrase.innerHTML = "{{_answer1.text}}";
+              phrase1.classList.remove("is_hide");
+              l = 1;
             } else {
-              phrase.innerHTML = "{{_answer2.text}}";
+              phrase2.classList.remove("is_hide");
+              l = 2;
             };
           	num.innerHTML = `${counter} из ${p}`;
           	el.classList.add("is_hide");
@@ -90,9 +96,15 @@ define([
         counter = 0;
         el.classList.remove("is_hide");
         count.innerHTML = counter;
+        if (l == 1) {
+          phrase1.classList.add("is_hide");
+        } else  if (l == 2) {
+          phrase2.classList.add("is_hide");
+        };
+        l = 0;
       };
       function progress1(){
-        if (m == 1){
+        if (m > 1){
           console.log(document.querySelector('[aria-label=" Completed. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w1'));
         } else {
           if (document.querySelector('[aria-label=" Incomplete. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar') == null){
