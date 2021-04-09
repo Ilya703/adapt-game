@@ -80,81 +80,40 @@
     },
     "_items": {
       "type": "array",
-      "required": false,
-      "title": "Narrative items",
+      "required": true,
+      "title": "items",
       "items": {
         "type": "object",
         "required": false,
         "properties": {
-          "title": {
+          "_text": {
             "type": "string",
-            "required": false,
-            "default": "",
-            "title": "Narrative display title",
+            "required": true,
+            "default": "Домашний театр,
+            "title": "Game display title",
             "inputType": "Text",
             "validators": [],
             "help": "",
             "translatable": true
           },
-          "_ariaLevel": {
-            "type": "number",
+          "_isTrue": {
+            "type": "boolean",
             "required": true,
-            "default": 0,
-            "title": "Narrative title level",
-            "inputType": "Number",
-            "validators": ["required", "number"],
-            "help": "Aria level for title"
-          },
-          "body": {
-            "type": "string",
-            "required": false,
-            "default": "",
-            "title": "Narrative main text",
-            "inputType": "TextArea",
+            "default": true,
+            "title": "Game display title",
+            "inputType": "Checkbox",
             "validators": [],
             "help": "",
             "translatable": true
           },
-          "_graphic": {
-            "type": "object",
-            "title": "Narrative graphic",
-            "properties": {
-              "src": {
-                "type": "string",
-                "required": true,
-                "default": "",
-                "title": "Select Graphic",
-                "inputType": "Asset:image",
-                "validators": ["required"],
-                "help": ""
-              },
-              "alt": {
-                "type": "string",
-                "required": false,
-                "default": "",
-                "title": "Alternative Text",
-                "inputType": "Text",
-                "validators": [],
-                "help": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
-                "translatable": true
-              },
-              "attribution": {
-                "type": "string",
-                "required": false,
-                "default": "",
-                "inputType": "Text",
-                "validators": [],
-                "help": "Text to be displayed as an attribution",
-                "translatable": true
-              }
             }
           },
           "_picture-small": {
             "type": "string",
             "required": true,
-            "default": "",
-            "title": "Narrative strapline",
-            "inputType": "Text",
+            "default": "course/en/images/pic.png",
+            "title": "Picture_small",
+            "inputType": "Asset:image",
             "validators": ["required"],
             "help": "",
             "translatable": true
@@ -162,9 +121,9 @@
           "_pic-background": {
             "type": "string",
             "required": true,
-            "default": "",
-            "title": "Narrative strapline",
-            "inputType": "Text",
+            "default": "course/en/images/pic1.jpg",
+            "title": "Picture_background",
+            "inputType": "Asset:image",
             "validators": ["required"],
             "help": "",
             "translatable": true
@@ -172,8 +131,8 @@
           "_answer1": {
             "type": "string",
             "required": true,
-            "default": "",
-            "title": "Narrative strapline",
+            "default": "Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!",
+            "title": "Answer1",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
@@ -182,8 +141,8 @@
           "_answer2": {
             "type": "string",
             "required": true,
-            "default": "",
-            "title": "Narrative strapline",
+            "default": "Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле",
+            "title": "Answer2",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
@@ -192,8 +151,8 @@
           "_button1": {
             "type": "string",
             "required": true,
-            "default": "",
-            "title": "Narrative strapline",
+            "default": "ЭТО ЕСТЬ",
+            "title": "Button1",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
@@ -202,8 +161,8 @@
           "_button2": {
             "type": "string",
             "required": true,
-            "default": "",
-            "title": "Narrative strapline",
+            "default": "ВОТ ЭТОГО НЕТ",
+            "title": "Button2",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
@@ -212,8 +171,8 @@
           "_play_again": {
             "type": "string",
             "required": true,
-            "default": "",
-            "title": "Narrative strapline",
+            "default": "Играть еще раз",
+            "title": "Play_again",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
@@ -222,8 +181,8 @@
           "_count": {
             "type": "string",
             "required": true,
-            "default": "",
-            "title": "Narrative strapline",
+            "default": "ОЧКИ:",
+            "title": "Counter",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
@@ -232,9 +191,9 @@
           "_default_count": {
             "type": "string",
             "required": true,
-            "default": "",
-            "title": "Narrative strapline",
-            "inputType": "Text",
+            "default": 0,
+            "title": "Count",
+            "inputType": "Number",
             "validators": ["required"],
             "help": "",
             "translatable": true
@@ -242,8 +201,8 @@
           "_note": {
             "type": "string",
             "required": true,
-            "default": "",
-            "title": "Narrative strapline",
+            "default": "Попробуйте угадать, чего нет во дворце Владимира Путина",
+            "title": "Note",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
