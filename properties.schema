@@ -172,7 +172,7 @@
           "_answer1": {
             "type": "string",
             "required": true,
-            "default": "Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!",
+            "default": "",
             "title": "Narrative strapline",
             "inputType": "Text",
             "validators": ["required"],
