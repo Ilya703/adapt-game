@@ -80,7 +80,7 @@
     },
     "_items": {
       "type": "array",
-      "required": true,
+      "required": false,
       "title": "items",
       "items": {
         "type": "object",
@@ -89,23 +89,64 @@
           "_text": {
             "type": "string",
             "required": true,
-            "default": "Домашний театр,
+            "default": "",
             "title": "Game display title",
             "inputType": "Text",
             "validators": [],
             "help": "",
             "translatable": true
           },
-          "_isTrue": {
-            "type": "boolean",
+          "_ariaLevel": {
+            "type": "number",
             "required": true,
-            "default": true,
-            "title": "Game display title",
-            "inputType": "Checkbox",
+            "default": 0,
+            "title": "Game title level",
+            "inputType": "Number",
+            "validators": ["required", "number"],
+            "help": "Aria level for title"
+          },
+          "body": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Game main text",
+            "inputType": "TextArea",
             "validators": [],
             "help": "",
             "translatable": true
           },
+          "_graphic": {
+            "type": "object",
+            "title": "Game graphic",
+            "properties": {
+              "src": {
+                "type": "string",
+                "required": true,
+                "default": "",
+                "title": "Select Graphic",
+                "inputType": "Asset:image",
+                "validators": ["required"],
+                "help": ""
+              },
+              "alt": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "title": "Alternative Text",
+                "inputType": "Text",
+                "validators": [],
+                "help": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+                "translatable": true
+              },
+              "attribution": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "inputType": "Text",
+                "validators": [],
+                "help": "Text to be displayed as an attribution",
+                "translatable": true
+              }
             }
           },
           "_picture-small": {
