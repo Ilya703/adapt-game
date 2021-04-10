@@ -13,6 +13,7 @@ define([
     }
 
     postRender() {
+    	this.resizeImage(Adapt.device.screenSize, true);
 
       if (this.model.get('_setCompletionOn') === 'inview') {
         this.setupInviewCompletion();
