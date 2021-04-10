@@ -7,7 +7,7 @@
       <div class="game_1">
       	<div class="block_1">
           <div class="block_in">
-            <img class="js-game-set-image-src pic1" src="{{_pic-background.pic_background}}">
+            <img class="js-graphic-set-image-src pic1" src="{{_pic-background.pic_background}}">
           </div>
           <div class="block_in1">
             <div class="result">
@@ -28,14 +28,14 @@
       			<div class="count" id="count">{{_default_count.text}}</div>
       		</div>
       		<div class="question">
-      			<img class="js-game-set-image-src pic" src="{{_picture-small.pic_small}}">
+      			<img class="js-graphic-set-image-src pic" src="{{_picture-small.pic_small}}">
             {{#each _items}}
       			 <div class="text_ is_hide" data-index="{{@index}}" data-isTrue="{{this.isTrue}}">{{this._text}}</div>
             {{/each}}
       		</div>
       		<div class="buttons">
-      			<div class="button_1 js-toggle-item" {{#if _isVisited}} is-visited{{/if}}" aria-expanded="false">{{_button1.text}}</div>
-      			<div class="button_2 js-toggle-item" {{#if _isVisited}} is-visited{{/if}}" aria-expanded="false">{{_button2.text}}</div>
+      			<div class="button_1">{{_button1.text}}</div>
+      			<div class="button_2">{{_button2.text}}</div>
       		</div>
       	</div>
       </div>
