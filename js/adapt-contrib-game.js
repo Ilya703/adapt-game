@@ -13,7 +13,8 @@ define([
     }
 
     postRender() {
-    	this.resizeImage(Adapt.device.screenSize, true);
+
+      this.resizeImage(Adapt.device.screenSize, true);
 
       if (this.model.get('_setCompletionOn') === 'inview') {
         this.setupInviewCompletion();
@@ -116,6 +117,8 @@ define([
     }
 
     resizeImage(setupInView) {
+    	this.$('.game__widget').imageready(() => {
+        this.setReadyStatus();
 
         if (setupInView) {
           this.setupInviewCompletion('.game__widget');
