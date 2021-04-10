@@ -120,7 +120,7 @@
           "default": "",
           "inputType": "Asset:image",
           "validators": ["required"],
-          "help": "Small picture"
+          "help": "The small sized image for mobile devices"
         }
       }
     },
@@ -134,7 +134,7 @@
           "default": "",
           "inputType": "Asset:image",
           "validators": ["required"],
-          "help": "Background picture"
+          "help": "The small sized image for mobile devices"
         }
       }
     },
@@ -199,7 +199,7 @@
             "required": true,
             "inputType": "Text",
             "title": "Game Title",
-            "default": "Question",
+            "default": "question",
             "validators": [],
             "help": "This is the item title",
             "translatable": true
