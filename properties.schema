@@ -114,7 +114,7 @@
       "type": "object",
       "required": false,
       "properties": {
-        "pic": {
+        "pic_small": {
           "type": "string",
           "required": true,
           "default": "",
@@ -128,7 +128,7 @@
       "type": "object",
       "required": false,
       "properties": {
-        "pic": {
+        "pic_background": {
           "type": "string",
           "required": true,
           "default": "",
