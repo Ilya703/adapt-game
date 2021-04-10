@@ -88,34 +88,57 @@
         "properties": {
           "title": {
             "type": "string",
-            "required": false,
-            "default": "",
-            "title": "Game display title",
-            "inputType": "Text",
-            "validators": [],
-            "help": "",
-            "translatable": true
-          },
-          "_ariaLevel": {
-            "type": "number",
             "required": true,
-            "default": 0,
-            "title": "Narrative title level",
-            "inputType": "Number",
-            "validators": ["required", "number"],
-            "help": "Aria level for title"
+            "inputType": "Text",
+            "title": "Item Title",
+            "default": "",
+            "validators": ["required"],
+            "help": "This is the item title",
+            "translatable": true
           },
           "body": {
             "type": "string",
-            "required": false,
-            "default": "",
-            "title": "Narrative main text",
+            "required": true,
             "inputType": "TextArea",
-            "validators": [],
-            "help": "",
+            "title": "Item Body",
+            "default": "",
+            "validators": ["required"],
+            "help": "This is the item body text that is hidden until the item title is clicked on",
             "translatable": true
-          }
-        },
+          },
+          "_graphic": {
+            "type": "object",
+            "required": false,
+            "title": "Graphic",
+            "properties": {
+              "alt": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "inputType": "Text",
+                "validators": [],
+                "help": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+                "translatable": true
+              },
+              "src": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "inputType": "Asset:image",
+                "validators": [],
+                "help": "Optional image which will be rendered with the item body text"
+              },
+              "attribution": {
+                "type":"string",
+                "required": false,
+                "default": "",
+                "inputType": "Text",
+                "validators": [],
+                "help": "Text to be displayed as an attribution",
+                "translatable": true
+              }
+            }
+          },
           "_picture-small": {
             "type": "string",
             "required": true,
