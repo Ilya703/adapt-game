@@ -117,8 +117,6 @@ define([
     }
 
     resizeImage(setupInView) {
-    	this.$('.game__widget').imageready(() => {
-        this.setReadyStatus();
 
         if (setupInView) {
           this.setupInviewCompletion('.game__widget');
@@ -132,8 +130,7 @@ define([
         this.model.reset(isResetOnRevisit);
       }
     }
-    
-  }
+   }
   GraphicView.template = 'game';
 
   return Adapt.register('game', {
