@@ -114,41 +114,8 @@
             "validators": [],
             "help": "",
             "translatable": true
-          },
-          "_graphic": {
-            "type": "object",
-            "title": "Narrative graphic",
-            "properties": {
-              "src": {
-                "type": "string",
-                "required": true,
-                "default": "",
-                "title": "Select Graphic",
-                "inputType": "Asset:image",
-                "validators": ["required"],
-                "help": ""
-              },
-              "alt": {
-                "type": "string",
-                "required": false,
-                "default": "",
-                "title": "Alternative Text",
-                "inputType": "Text",
-                "validators": [],
-                "help": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
-                "translatable": true
-              },
-              "attribution": {
-                "type": "string",
-                "required": false,
-                "default": "",
-                "inputType": "Text",
-                "validators": [],
-                "help": "Text to be displayed as an attribution",
-                "translatable": true
-              }
-            }
-          },
+          }
+        },
           "_picture-small": {
             "type": "string",
             "required": true,
@@ -244,16 +211,6 @@
             "required": true,
             "default": "",
             "title": "Note",
-            "inputType": "Text",
-            "validators": ["required"],
-            "help": "",
-            "translatable": true
-          },
-          "strapline": {
-            "type": "string",
-            "required": true,
-            "default": "",
-            "title": "Narrative strapline",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
