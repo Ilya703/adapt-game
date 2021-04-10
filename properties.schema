@@ -114,7 +114,7 @@
       "type": "object",
       "required": false,
       "properties": {
-        "src": {
+        "pic": {
           "type": "string",
           "required": true,
           "default": "",
@@ -128,7 +128,7 @@
       "type": "object",
       "required": false,
       "properties": {
-        "src": {
+        "pic": {
           "type": "string",
           "required": true,
           "default": "",
@@ -199,7 +199,7 @@
             "required": true,
             "inputType": "Text",
             "title": "Game Title",
-            "default": "game",
+            "default": "Question",
             "validators": [],
             "help": "This is the item title",
             "translatable": true
