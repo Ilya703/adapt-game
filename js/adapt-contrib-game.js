@@ -39,7 +39,6 @@ define([
       function game1() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
-        el.classList.add("is-visited");
         if (el.dataset.istrue == "true"){
           counter += 1;
         }
@@ -60,7 +59,6 @@ define([
             };
           	num.innerHTML = `${counter} из ${p}`;
           	el.classList.add("is_hide");
-          	el.classList.add("is-visited");
         };
         if (i < p){
         	el = document.querySelectorAll(".text_")[i];
@@ -70,7 +68,6 @@ define([
       function game2() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
-        el.classList.add("is-visited");
         if (el.dataset.istrue == "false"){
           counter += 1;
         }
@@ -91,7 +88,6 @@ define([
             };
           	num.innerHTML = `${counter} из ${p}`;
           	el.classList.add("is_hide");
-          	el.classList.add("is-visited");
         };
         if (i < p){
         	el = document.querySelectorAll(".text_")[i];
@@ -117,6 +113,16 @@ define([
       button1.addEventListener("click", game1);
       button2.addEventListener("click", game2);
       once_more.addEventListener("click", more);
+    }
+
+    resizeImage(setupInView) {
+      this.$('.graphic__widget').imageready(() => {
+        this.setReadyStatus();
+
+        if (setupInView) {
+          this.setupInviewCompletion('.graphic__widget');
+        }
+      });
     }
 
     checkIfResetOnRevisit() {
