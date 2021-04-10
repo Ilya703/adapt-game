@@ -39,6 +39,7 @@ define([
       function game1() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
+        el.classList.add("is-visited");
         if (el.dataset.istrue == "true"){
           counter += 1;
         }
@@ -47,7 +48,6 @@ define([
         if (i == p){
         	inner.classList.add("show");
         	inner1.classList.add("show");
-        	progress();
           if (m == 0) {
             m += 1;
           };
@@ -60,6 +60,7 @@ define([
             };
           	num.innerHTML = `${counter} из ${p}`;
           	el.classList.add("is_hide");
+          	el.classList.add("is-visited");
         };
         if (i < p){
         	el = document.querySelectorAll(".text_")[i];
@@ -69,6 +70,7 @@ define([
       function game2() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
+        el.classList.add("is-visited");
         if (el.dataset.istrue == "false"){
           counter += 1;
         }
@@ -77,7 +79,6 @@ define([
         if (i == p){
         	inner.classList.add("show");
         	inner1.classList.add("show");
-          	progress();
           if (m == 0) {
             m += 1;
           };
@@ -90,6 +91,7 @@ define([
             };
           	num.innerHTML = `${counter} из ${p}`;
           	el.classList.add("is_hide");
+          	el.classList.add("is-visited");
         };
         if (i < p){
         	el = document.querySelectorAll(".text_")[i];
@@ -110,12 +112,6 @@ define([
           phrase2.classList.add("is_hide");
         };
         l = 0;
-      };
-      function progress(){
-      	this.$('.graphic__widget').imageready(() => {
-        	this.setReadyStatus();
-          		this.setupInviewCompletion('.graphic__widget');
-      	});
       };
 
       button1.addEventListener("click", game1);
