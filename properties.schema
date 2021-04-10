@@ -31,22 +31,36 @@
       "translatable": true
     },
     "_button1": {
-      "type": "string",
+      "type": "object",
       "required": false,
-      "default": "ЭТО ЕСТЬ",
-      "inputType": "Text",
-      "validators": [],
-      "help": "This is the button_1 text",
-      "translatable": true
+      "properties": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Button1 text",
+            "default": "ЭТО ЕСТЬ",
+            "validators": [],
+            "help": "This is the button1 text",
+            "translatable": true
+          }
+        }
     },
     "_button2": {
-      "type": "string",
+      "type": "object",
       "required": false,
-      "default": "ВОТ ЭТОГО НЕТ",
-      "inputType": "Text",
-      "validators": [],
-      "help": "This is the button_2 text",
-      "translatable": true
+      "properties": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Button2 text",
+            "default": "ВОТ ЭТОГО НЕТ",
+            "validators": [],
+            "help": "This is the button2 text",
+            "translatable": true
+          }
+        }
     },
     "_items": {
       "type": "array",
