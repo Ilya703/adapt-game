@@ -6,10 +6,21 @@ define([
 
   class GraphicView extends ComponentView {
 
-    preRender() {
-      this.listenTo(Adapt, 'device:changed', this.resizeImage);
+    events() {
+      return {
+        'click .js-toggle-item': 'onClick'
+      };
+    }
 
+    preRender() {
       this.checkIfResetOnRevisit();
+
+      this.model.resetActiveItems();
+
+      this.listenTo(this.model.get('_children'), {
+        'change:_isActive': this.onItemsActiveChange,
+        'change:_isVisited': this.onItemsVisitedChange
+      });
     }
 
     postRender() {
