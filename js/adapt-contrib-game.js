@@ -6,21 +6,10 @@ define([
 
   class GraphicView extends ComponentView {
 
-    events() {
-      return {
-        'click .js-toggle-item': 'onClick'
-      };
-    }
-
     preRender() {
       this.listenTo(Adapt, 'device:changed', this.resizeImage);
 
       this.checkIfResetOnRevisit();
-
-      this.listenTo(this.model.get('_children'), {
-        'change:_isActive': this.onItemsActiveChange,
-        'change:_isVisited': this.onItemsVisitedChange
-      });
     }
 
     postRender() {
@@ -55,6 +44,7 @@ define([
       function game1() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
+        el.classList.add("is-visited");
         if (el.dataset.istrue == "true"){
           counter += 1;
         }
@@ -76,6 +66,7 @@ define([
             };
           	num.innerHTML = `${counter} из ${p}`;
           	el.classList.add("is_hide");
+          	el.classList.add("is-visited");
         };
         if (i < p){
         	el = document.querySelectorAll(".text_")[i];
@@ -85,6 +76,7 @@ define([
       function game2() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");
+        el.classList.add("is-visited");
         if (el.dataset.istrue == "false"){
           counter += 1;
         }
@@ -106,6 +98,7 @@ define([
             };
           	num.innerHTML = `${counter} из ${p}`;
           	el.classList.add("is_hide");
+          	el.classList.add("is-visited");
         };
         if (i < p){
         	el = document.querySelectorAll(".text_")[i];
@@ -152,27 +145,7 @@ define([
         this.model.reset(isResetOnRevisit);
       }
     }
-
-    onItemsVisitedChange(item, isVisited) {
-      if (m >= 1) {
-        button1.classList.add("is-visited");
-        button2.classList.add("is-visited");
-      }
-    }
     
-    resizeImage(width, setupInView) {
-      const imageWidth = width === 'medium' ? 'small' : width;
-      const imageSrc = (this.model.get('_game')) ? this.model.get('_game')[imageWidth] : '';
-      this.$('.js-game-set-image-src').attr('src', imageSrc);
-
-      this.$('.game__widget').imageready(() => {
-        this.setReadyStatus();
-
-        if (setupInView) {
-          this.setupInviewCompletion('.game__widget');
-        }
-      });
-    }
   }
   GraphicView.template = 'game';
 
