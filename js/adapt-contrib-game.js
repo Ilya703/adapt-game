@@ -121,7 +121,6 @@ define([
         if (setupInView) {
           this.setupInviewCompletion('.game__widget');
         }
-      });
     }
 
     checkIfResetOnRevisit() {
