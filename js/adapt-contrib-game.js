@@ -118,9 +118,13 @@ define([
 
     resizeImage(setupInView) {
 
+    	this.$('.graphic__widget').imageready(() => {
+        this.setReadyStatus();
+
         if (setupInView) {
           this.setupInviewCompletion('.game__widget');
         }
+       });
     }
 
     checkIfResetOnRevisit() {
