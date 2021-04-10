@@ -7,7 +7,7 @@ define([
   class GraphicView extends ComponentView {
 
     preRender() {
-      // this.listenTo(Adapt, 'device:changed', this.resizeImage);
+      this.listenTo(Adapt, 'device:changed', this.resizeImage);
 
       this.checkIfResetOnRevisit();
     }
@@ -115,10 +115,11 @@ define([
     }
 
     resizeImage(width, setupInView) {
-
-        if (setupInView) {
-          this.setupInviewCompletion('.game__widget');
-        }
+    	if (m >= 1){
+    		if (setupInView) {
+          		this.setupInviewCompletion('.game__widget');
+       		}
+    	}
       });
     }
 
