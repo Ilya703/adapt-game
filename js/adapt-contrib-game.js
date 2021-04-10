@@ -7,14 +7,12 @@ define([
   class GraphicView extends ComponentView {
 
     preRender() {
-      // this.listenTo(Adapt, 'device:changed', this.resizeImage);
+      this.listenTo(Adapt, 'device:changed', this.resizeImage);
 
       this.checkIfResetOnRevisit();
     }
 
     postRender() {
-
-      this.setReadyStatus();
 
       if (this.model.get('_setCompletionOn') === 'inview') {
         this.setupInviewCompletion();
