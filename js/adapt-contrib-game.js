@@ -116,7 +116,11 @@ define([
       once_more.addEventListener("click", more);
     }
 
-    resizeImage(setupInView) {
+    resizeImage(width, setupInView) {
+      const imageWidth = width === 'medium' ? 'small' : width;
+      const imageSrc = (this.model.get('_graphic')) ? this.model.get('_graphic')[imageWidth] : '';
+      this.$('.js-graphic-set-image-src').attr('src', imageSrc);
+
       this.$('.graphic__widget').imageready(() => {
         this.setReadyStatus();
 
