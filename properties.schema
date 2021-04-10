@@ -110,38 +110,6 @@
           }
         }
     },
-    "_picture-small": {
-      "type": "object",
-      "required": false,
-      "properties": {
-          "src": {
-            "type": "string",
-            "required": true,
-            "inputType": "Asset:image",,
-            "title": "small picture",
-            "default": "",
-            "validators": ["required"],
-            "help": "This is the small picture",
-            "translatable": true
-          }
-        }
-    },
-    "_pic-background": {
-      "type": "object",
-      "required": false,
-      "properties": {
-          "src": {
-            "type": "string",
-            "required": true,
-            "inputType": "Asset:image",,
-            "title": "background picture",
-            "default": "",
-            "validators": ["required"],
-            "help": "This is the background picture",
-            "translatable": true
-          }
-        }
-    },
     "_count": {
       "type": "object",
       "required": false,
