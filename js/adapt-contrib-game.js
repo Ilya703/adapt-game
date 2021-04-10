@@ -14,8 +14,6 @@ define([
 
     postRender() {
 
-      this.setReadyStatus();
-
       if (this.model.get('_setCompletionOn') === 'inview') {
         this.setupInviewCompletion();
       }
