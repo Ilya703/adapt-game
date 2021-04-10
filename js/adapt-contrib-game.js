@@ -13,9 +13,9 @@ define([
     }
 
     preRender() {
-      this.checkIfResetOnRevisit();
+      this.listenTo(Adapt, 'device:changed', this.resizeImage);
 
-      this.model.resetActiveItems();
+      this.checkIfResetOnRevisit();
 
       this.listenTo(this.model.get('_children'), {
         'change:_isActive': this.onItemsActiveChange,
@@ -150,6 +150,13 @@ define([
 
       if (isResetOnRevisit) {
         this.model.reset(isResetOnRevisit);
+      }
+    }
+
+    onItemsVisitedChange(item, isVisited) {
+      if (m >= 1) {
+        button1.classList.add("is-visited");
+        button2.classList.add("is-visited");
       }
     }
     
