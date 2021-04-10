@@ -49,18 +49,17 @@
             "translatable": true
           },
           "_isTrue": {
-            "type": "string",
+            "type": "boolean",
             "required": true,
-            "inputType": "Text",
-            "title": "Game Title",
-            "default": "true",
-            "enum": ["true", "false"],
+            "title": "True or False",
+            "default": true,
+            "enum": [true, false],
             "inputType": {
               "type": "Select",
-              "options": ["true", "false"]
+              "options": [true, false]
             },
             "validators": [],
-            "help": "This is the item title",
+            "help": "This is the item answer: true or false",
             "translatable": true
           }
         }
