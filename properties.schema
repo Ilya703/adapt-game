@@ -221,7 +221,7 @@
             "type": "boolean",
             "required": true,
             "title": "True or False",
-            "default": true,
+            "default": "true",
             "enum": [true, false],
             "inputType": {
               "type": "Select",

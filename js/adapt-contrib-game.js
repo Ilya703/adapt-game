@@ -117,14 +117,15 @@ define([
     }
 
     resizeImage(setupInView) {
+    	if (m >= 1) {
+    		this.$('.graphic__widget').imageready(() => {
+        	this.setReadyStatus();
 
-    	this.$('.graphic__widget').imageready(() => {
-        this.setReadyStatus();
-
-        if (setupInView) {
-          this.setupInviewCompletion('.game__widget');
-        }
-       });
+        		if (setupInView) {
+          			this.setupInviewCompletion('.game__widget');
+        		}
+       		});
+    	}
     }
 
     checkIfResetOnRevisit() {
