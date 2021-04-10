@@ -118,9 +118,6 @@ define([
 
     resizeImage(width, setupInView) {
 
-      this.$('.game__widget').imageready(() => {
-        this.setReadyStatus();
-
         if (setupInView) {
           this.setupInviewCompletion('.game__widget');
         }
