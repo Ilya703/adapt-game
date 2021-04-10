@@ -120,7 +120,7 @@
           "default": "",
           "inputType": "Asset:image",
           "validators": ["required"],
-          "help": "The small sized image for mobile devices"
+          "help": "Small picture"
         }
       }
     },
@@ -134,7 +134,7 @@
           "default": "",
           "inputType": "Asset:image",
           "validators": ["required"],
-          "help": "The small sized image for mobile devices"
+          "help": "Background picture"
         }
       }
     },
