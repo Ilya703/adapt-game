@@ -26,8 +26,8 @@ define([
       var phrase1 = document.getElementById('phrase1');
       var phrase2 = document.getElementById('phrase2');
       var once_more = document.querySelector(".once_more");
-      var button_p = document.querySelector(".nav__pagelevelprogress-btn");
-      var progress = document.querySelector(".game__title .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar");
+      // var button_p = document.querySelector(".nav__pagelevelprogress-btn");
+      // var progress = document.querySelector(".game__title .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar");
       let i = 0;
       let m = 0;
       let l = 0;
@@ -46,7 +46,7 @@ define([
         if (i == p){
         	inner.classList.add("show");
         	inner1.classList.add("show");
-          progress.classList.add("w1");
+          // progress.classList.add("w1");
           if (m == 0) {
             m += 1;
           };
@@ -76,7 +76,7 @@ define([
         if (i == p){
         	inner.classList.add("show");
         	inner1.classList.add("show");
-          progress.classList.add("w1");
+          // progress.classList.add("w1");
           if (m == 0) {
             m += 1;
           };
@@ -110,22 +110,22 @@ define([
         };
         l = 0;
       };
-      function progress1(){
-        if (m == 1){
-          console.log(document.querySelector('[aria-label=" Completed. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w1'));
-        } else {
-          if (document.querySelector('[aria-label=" Incomplete. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar') == null){
-            console.log(document.querySelector('[aria-label=" Completed. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w'));
-          } else {
-            console.log(document.querySelector('[aria-label=" Incomplete. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w'));
-          }
-        }
-      };
+      // function progress1(){
+      //   if (m == 1){
+      //     console.log(document.querySelector('[aria-label=" Completed. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w1'));
+      //   } else {
+      //     if (document.querySelector('[aria-label=" Incomplete. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar') == null){
+      //       console.log(document.querySelector('[aria-label=" Completed. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w'));
+      //     } else {
+      //       console.log(document.querySelector('[aria-label=" Incomplete. Game"] .pagelevelprogress__indicator .pagelevelprogress__indicator-inner .pagelevelprogress__indicator-bar').classList.add('w'));
+      //     }
+      //   }
+      // };
 
       button1.addEventListener("click", game1);
       button2.addEventListener("click", game2);
       once_more.addEventListener("click", more);
-      button_p.addEventListener("click", progress1);
+      // button_p.addEventListener("click", progress1);
     }
 
     checkIfResetOnRevisit() {

@@ -131,6 +131,14 @@
           "inputType": "Asset:image",
           "validators": ["required"],
           "help": "The large sized image for desktop devices"
+        },
+        "small": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "inputType": "Asset:image",
+          "validators": ["required"],
+          "help": "The small sized image for mobile devices"
         }
       }
     },
@@ -155,6 +163,14 @@
           "inputType": "Asset:image",
           "validators": ["required"],
           "help": "The large sized image for desktop devices"
+        },
+        "small": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "inputType": "Asset:image",
+          "validators": ["required"],
+          "help": "The small sized image for mobile devices"
         }
       }
     },
@@ -219,7 +235,7 @@
             "required": true,
             "inputType": "Text",
             "title": "Game Title",
-            "default": "",
+            "default": "game",
             "validators": [],
             "help": "This is the item title",
             "translatable": true
