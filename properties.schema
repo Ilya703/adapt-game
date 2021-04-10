@@ -110,6 +110,54 @@
           }
         }
     },
+    "_picture-small": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "alt": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "title": "Alternative Text",
+          "inputType": "Text",
+          "validators": [],
+          "help": "The alternative text for this image",
+          "translatable": true
+        },
+        "large": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "inputType": "Asset:image",
+          "validators": ["required"],
+          "help": "The large sized image for desktop devices"
+        }
+      }
+    },
+    "_pic-background": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "alt": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "title": "Alternative Text",
+          "inputType": "Text",
+          "validators": [],
+          "help": "The alternative text for this image",
+          "translatable": true
+        },
+        "large": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "inputType": "Asset:image",
+          "validators": ["required"],
+          "help": "The large sized image for desktop devices"
+        }
+      }
+    },
     "_count": {
       "type": "object",
       "required": false,
