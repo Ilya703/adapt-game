@@ -78,35 +78,7 @@
       "validators": ["required"],
       "help": "Whether completion is based on the learner having viewed all the narrative items - or just having viewed the component"
     },
-    "_items": {
-      "type": "array",
-      "required": false,
-      "title": "Game items",
-      "items": {
-        "type": "object",
-        "required": false,
-        "properties": {
-          "title": {
-            "type": "string",
-            "required": true,
-            "inputType": "Text",
-            "title": "Item Title",
-            "default": "",
-            "validators": ["required"],
-            "help": "This is the item title",
-            "translatable": true
-          },
-          "body": {
-            "type": "string",
-            "required": true,
-            "inputType": "TextArea",
-            "title": "Item Body",
-            "default": "",
-            "validators": ["required"],
-            "help": "This is the item body text that is hidden until the item title is clicked on",
-            "translatable": true
-          },
-          "_picture-small": {
+    "_picture-small": {
             "type": "string",
             "required": true,
             "default": "",
@@ -206,38 +178,34 @@
             "help": "",
             "translatable": true
           },
-          "_graphic": {
-            "type": "object",
-            "required": false,
-            "title": "Graphic",
-            "properties": {
-              "alt": {
-                "type": "string",
-                "required": false,
-                "default": "",
-                "inputType": "Text",
-                "validators": [],
-                "help": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
-                "translatable": true
-              },
-              "src": {
-                "type": "string",
-                "required": false,
-                "default": "",
-                "inputType": "Asset:image",
-                "validators": [],
-                "help": "Optional image which will be rendered with the item body text"
-              },
-              "attribution": {
-                "type":"string",
-                "required": false,
-                "default": "",
-                "inputType": "Text",
-                "validators": [],
-                "help": "Text to be displayed as an attribution",
-                "translatable": true
-              }
-            }
+    "_items": {
+      "type": "array",
+      "required": false,
+      "title": "Game items",
+      "items": {
+        "type": "object",
+        "required": false,
+        "properties": {
+          "title": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Item Title",
+            "default": "",
+            "validators": ["required"],
+            "help": "This is the item title",
+            "translatable": true
+          },
+          "body": {
+            "type": "string",
+            "required": true,
+            "inputType": "TextArea",
+            "title": "Item Body",
+            "default": "",
+            "validators": ["required"],
+            "help": "This is the item body text that is hidden until the item title is clicked on",
+            "translatable": true
+          },
           }
         }
       }
