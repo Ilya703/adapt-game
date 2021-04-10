@@ -62,6 +62,134 @@
           }
         }
     },
+    "_play_again": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "play_again text",
+            "default": "Играть еще раз",
+            "validators": [],
+            "help": "This is the play_again text",
+            "translatable": true
+          }
+        }
+    },
+    "_answer1": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Answer1 text",
+            "default": "Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!",
+            "validators": [],
+            "help": "This is the answer1 text",
+            "translatable": true
+          }
+        }
+    },
+    "_answer2": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Answer2 text",
+            "default": "Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле",
+            "validators": [],
+            "help": "This is the answer2 text",
+            "translatable": true
+          }
+        }
+    },
+    "_picture-small": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "src": {
+            "type": "string",
+            "required": true,
+            "inputType": "Asset:image",,
+            "title": "small picture",
+            "default": "",
+            "validators": ["required"],
+            "help": "This is the small picture",
+            "translatable": true
+          }
+        }
+    },
+    "_pic-background": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "src": {
+            "type": "string",
+            "required": true,
+            "inputType": "Asset:image",,
+            "title": "background picture",
+            "default": "",
+            "validators": ["required"],
+            "help": "This is the background picture",
+            "translatable": true
+          }
+        }
+    },
+    "_count": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "count text",
+            "default": "ОЧКИ:",
+            "validators": [],
+            "help": "This is the count text",
+            "translatable": true
+          }
+        }
+    },
+    "_default_count": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text": {
+            "type": "number",
+            "required": true,
+            "inputType": "Number",
+            "title": "Default counter",
+            "default": 0,
+            "validators": [],
+            "help": "This is the default counter text",
+            "translatable": true
+          }
+        }
+    },
+    "_note": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Default note text",
+            "default": "Попробуйте угадать, чего нет во дворце Владимира Путина",
+            "validators": [],
+            "help": "This is the default note text",
+            "translatable": true
+          }
+        }
+    },
     "_items": {
       "type": "array",
       "required": true,
