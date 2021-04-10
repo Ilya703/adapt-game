@@ -118,14 +118,14 @@ define([
 
     resizeImage(width, setupInView) {
       const imageWidth = width === 'medium' ? 'small' : width;
-      const imageSrc = (this.model.get('_graphic')) ? this.model.get('_graphic')[imageWidth] : '';
+      const imageSrc = (this.model.get('_game')) ? this.model.get('_game')[imageWidth] : '';
       this.$('.js-graphic-set-image-src').attr('src', imageSrc);
 
-      this.$('.graphic__widget').imageready(() => {
+      this.$('.game__widget').imageready(() => {
         this.setReadyStatus();
 
         if (setupInView) {
-          this.setupInviewCompletion('.graphic__widget');
+          this.setupInviewCompletion('.game__widget');
         }
       });
     }
