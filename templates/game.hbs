@@ -29,6 +29,7 @@
       		</div>
       		<div class="question">
       			<img class="game__image js-graphic-set-image-src pic" src="{{_graphic.src}}" data-large="{{_graphic.large}}" data-small="{{_graphic.small}}">
+            <img class="graphic__image js-graphic-set-image-src" src="{{_graphic.src}}" data-large="{{_graphic.large}}" data-small="{{_graphic.small}}" {{#if _graphic.alt}}aria-label="{{{compile_a11y_normalize _graphic.alt}}}"{{else}}aria-hidden="true"{{/if}}>
             {{#each _items}}
       			 <div class="text_ is_hide" data-index="{{@index}}" data-isTrue="{{this.isTrue}}">{{this._text}}</div>
             {{/each}}

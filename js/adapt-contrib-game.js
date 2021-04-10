@@ -34,7 +34,7 @@ define([
       let counter = 0;
       let p = el1.length;
       el.classList.remove("is_hide");
-      progress.classList.add("w");
+      // progress.classList.add("w");
       function game1() {
         el = document.querySelectorAll(".text_")[i];
         el.classList.add("is_hide");

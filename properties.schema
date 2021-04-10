@@ -114,16 +114,6 @@
       "type": "object",
       "required": false,
       "properties": {
-          "alt": {
-          "type": "string",
-          "required": false,
-          "default": "",
-          "title": "Alternative Text",
-          "inputType": "Text",
-          "validators": [],
-          "help": "The alternative text for this image",
-          "translatable": true
-        },
         "large": {
           "type": "string",
           "required": true,
@@ -146,16 +136,6 @@
       "type": "object",
       "required": false,
       "properties": {
-          "alt": {
-          "type": "string",
-          "required": false,
-          "default": "",
-          "title": "Alternative Text",
-          "inputType": "Text",
-          "validators": [],
-          "help": "The alternative text for this image",
-          "translatable": true
-        },
         "large": {
           "type": "string",
           "required": true,
