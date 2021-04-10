@@ -81,74 +81,32 @@
     "_items": {
       "type": "array",
       "required": false,
-      "title": "Narrative items",
+      "title": "Game items",
       "items": {
         "type": "object",
         "required": false,
         "properties": {
-          "title": {
+          "_text": {
             "type": "string",
             "required": false,
             "default": "",
-            "title": "Narrative display title",
+            "title": "Game display title",
             "inputType": "Text",
             "validators": [],
             "help": "",
             "translatable": true
           },
-          "_ariaLevel": {
-            "type": "number",
-            "required": true,
-            "default": 0,
-            "title": "Narrative title level",
-            "inputType": "Number",
-            "validators": ["required", "number"],
-            "help": "Aria level for title"
-          },
-          "body": {
-            "type": "string",
+          "_isTrue": {
+            "type": "boolean",
             "required": false,
             "default": "",
-            "title": "Narrative main text",
-            "inputType": "TextArea",
+            "title": "Game display title",
+            "inputType": "Text",
             "validators": [],
             "help": "",
             "translatable": true
-          },
-          "_graphic": {
-            "type": "object",
-            "title": "Narrative graphic",
-            "properties": {
-              "src": {
-                "type": "string",
-                "required": true,
-                "default": "",
-                "title": "Select Graphic",
-                "inputType": "Asset:image",
-                "validators": ["required"],
-                "help": ""
-              },
-              "alt": {
-                "type": "string",
-                "required": false,
-                "default": "",
-                "title": "Alternative Text",
-                "inputType": "Text",
-                "validators": [],
-                "help": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
-                "translatable": true
-              },
-              "attribution": {
-                "type": "string",
-                "required": false,
-                "default": "",
-                "inputType": "Text",
-                "validators": [],
-                "help": "Text to be displayed as an attribution",
-                "translatable": true
-              }
-            }
-          },
+          }
+        },
           "_picture-small": {
             "type": "string",
             "required": true,
@@ -193,7 +151,7 @@
             "type": "string",
             "required": true,
             "default": "",
-            "title": "Narrative strapline",
+            "title": "Button_1",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
@@ -203,7 +161,7 @@
             "type": "string",
             "required": true,
             "default": "",
-            "title": "Narrative strapline",
+            "title": "Button_2",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
@@ -213,7 +171,7 @@
             "type": "string",
             "required": true,
             "default": "",
-            "title": "Narrative strapline",
+            "title": "PLay_again",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
@@ -223,17 +181,17 @@
             "type": "string",
             "required": true,
             "default": "",
-            "title": "Narrative strapline",
+            "title": "Counter",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
             "translatable": true
           },
           "_default_count": {
-            "type": "string",
+            "type": "number",
             "required": true,
-            "default": "",
-            "title": "Narrative strapline",
+            "default": 0,
+            "title": "Count",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
@@ -243,17 +201,7 @@
             "type": "string",
             "required": true,
             "default": "",
-            "title": "Narrative strapline",
-            "inputType": "Text",
-            "validators": ["required"],
-            "help": "",
-            "translatable": true
-          },
-          "strapline": {
-            "type": "string",
-            "required": true,
-            "default": "",
-            "title": "Narrative strapline",
+            "title": "Note",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
