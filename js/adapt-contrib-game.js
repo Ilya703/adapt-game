@@ -7,12 +7,14 @@ define([
   class GraphicView extends ComponentView {
 
     preRender() {
-      this.listenTo(Adapt, 'device:changed', this.resizeImage);
+      // this.listenTo(Adapt, 'device:changed', this.resizeImage);
 
       this.checkIfResetOnRevisit();
     }
 
     postRender() {
+
+      this.setReadyStatus();
 
       if (this.model.get('_setCompletionOn') === 'inview') {
         this.setupInviewCompletion();
@@ -114,12 +116,11 @@ define([
       once_more.addEventListener("click", more);
     }
 
-    resizeImage(width, setupInView) {
-    	if (m >= 1){
-    		if (setupInView) {
-          		this.setupInviewCompletion('.game__widget');
-       		}
-    	}
+    resizeImage(setupInView) {
+
+        if (setupInView) {
+          this.setupInviewCompletion('.game__widget');
+        }
       });
     }
 
