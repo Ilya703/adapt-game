@@ -47,7 +47,13 @@ define([
         if (i == p){
         	inner.classList.add("show");
         	inner1.classList.add("show");
-        	this.setupInviewCompletion('.game__widget');
+        	this.$('.graphic__widget').imageready(() => {
+        		this.setReadyStatus();
+
+        	if (setupInView) {
+          		this.setupInviewCompletion('.graphic__widget');
+        		}
+      		});
           if (m == 0) {
             m += 1;
           };
@@ -77,7 +83,13 @@ define([
         if (i == p){
         	inner.classList.add("show");
         	inner1.classList.add("show");
-          	this.setupInviewCompletion('.game__widget');
+          	this.$('.graphic__widget').imageready(() => {
+        		this.setReadyStatus();
+
+        	if (setupInView) {
+          		this.setupInviewCompletion('.graphic__widget');
+        		}
+      		});
           if (m == 0) {
             m += 1;
           };
