@@ -114,21 +114,13 @@
       "type": "object",
       "required": false,
       "properties": {
-        "large": {
+        "src": {
           "type": "string",
           "required": true,
           "default": "",
           "inputType": "Asset:image",
           "validators": ["required"],
-          "help": "The large sized image for desktop devices"
-        },
-        "small": {
-          "type": "string",
-          "required": true,
-          "default": "",
-          "inputType": "Asset:image",
-          "validators": ["required"],
-          "help": "The small sized image for mobile devices"
+          "help": "Small picture"
         }
       }
     },
@@ -136,21 +128,13 @@
       "type": "object",
       "required": false,
       "properties": {
-        "large": {
+        "src": {
           "type": "string",
           "required": true,
           "default": "",
           "inputType": "Asset:image",
           "validators": ["required"],
-          "help": "The large sized image for desktop devices"
-        },
-        "small": {
-          "type": "string",
-          "required": true,
-          "default": "",
-          "inputType": "Asset:image",
-          "validators": ["required"],
-          "help": "The small sized image for mobile devices"
+          "help": "Background picture"
         }
       }
     },
