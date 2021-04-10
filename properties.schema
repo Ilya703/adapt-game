@@ -86,7 +86,7 @@
         "type": "object",
         "required": false,
         "properties": {
-          "_text": {
+          "title": {
             "type": "string",
             "required": false,
             "default": "",
@@ -96,17 +96,59 @@
             "help": "",
             "translatable": true
           },
-          "_isTrue": {
-            "type": "boolean",
+          "_ariaLevel": {
+            "type": "number",
+            "required": true,
+            "default": 0,
+            "title": "Narrative title level",
+            "inputType": "Number",
+            "validators": ["required", "number"],
+            "help": "Aria level for title"
+          },
+          "body": {
+            "type": "string",
             "required": false,
             "default": "",
-            "title": "Game display title",
-            "inputType": "Text",
+            "title": "Narrative main text",
+            "inputType": "TextArea",
             "validators": [],
             "help": "",
             "translatable": true
-          }
-        },
+          },
+          "_graphic": {
+            "type": "object",
+            "title": "Narrative graphic",
+            "properties": {
+              "src": {
+                "type": "string",
+                "required": true,
+                "default": "",
+                "title": "Select Graphic",
+                "inputType": "Asset:image",
+                "validators": ["required"],
+                "help": ""
+              },
+              "alt": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "title": "Alternative Text",
+                "inputType": "Text",
+                "validators": [],
+                "help": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+                "translatable": true
+              },
+              "attribution": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "inputType": "Text",
+                "validators": [],
+                "help": "Text to be displayed as an attribution",
+                "translatable": true
+              }
+            }
+          },
           "_picture-small": {
             "type": "string",
             "required": true,
@@ -188,9 +230,9 @@
             "translatable": true
           },
           "_default_count": {
-            "type": "number",
+            "type": "string",
             "required": true,
-            "default": 0,
+            "default": "",
             "title": "Count",
             "inputType": "Text",
             "validators": ["required"],
@@ -202,6 +244,16 @@
             "required": true,
             "default": "",
             "title": "Note",
+            "inputType": "Text",
+            "validators": ["required"],
+            "help": "",
+            "translatable": true
+          },
+          "strapline": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Narrative strapline",
             "inputType": "Text",
             "validators": ["required"],
             "help": "",
