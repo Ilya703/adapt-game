@@ -47,13 +47,7 @@ define([
         if (i == p){
         	inner.classList.add("show");
         	inner1.classList.add("show");
-        	this.$('.graphic__widget').imageready(() => {
-        		this.setReadyStatus();
-
-        	if (setupInView) {
-          		this.setupInviewCompletion('.graphic__widget');
-        		}
-      		});
+        	progress();
           if (m == 0) {
             m += 1;
           };
@@ -83,13 +77,7 @@ define([
         if (i == p){
         	inner.classList.add("show");
         	inner1.classList.add("show");
-          	this.$('.graphic__widget').imageready(() => {
-        		this.setReadyStatus();
-
-        	if (setupInView) {
-          		this.setupInviewCompletion('.graphic__widget');
-        		}
-      		});
+          	progress();
           if (m == 0) {
             m += 1;
           };
@@ -122,6 +110,12 @@ define([
           phrase2.classList.add("is_hide");
         };
         l = 0;
+      };
+      function progress(){
+      	this.$('.graphic__widget').imageready(() => {
+        	this.setReadyStatus();
+          		this.setupInviewCompletion('.graphic__widget');
+      	});
       };
 
       button1.addEventListener("click", game1);
