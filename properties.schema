@@ -30,6 +30,24 @@
       "help": "This is the instruction text",
       "translatable": true
     },
+    "_button1": {
+      "type": "string",
+      "required": false,
+      "default": "ЭТО ЕСТЬ",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the button_1 text",
+      "translatable": true
+    },
+    "_button2": {
+      "type": "string",
+      "required": false,
+      "default": "ВОТ ЭТОГО НЕТ",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the button_2 text",
+      "translatable": true
+    },
     "_items": {
       "type": "array",
       "required": true,
@@ -48,7 +66,7 @@
             "help": "This is the item title",
             "translatable": true
           },
-          "_isTrue": {
+          "isTrue": {
             "type": "boolean",
             "required": true,
             "title": "True or False",
