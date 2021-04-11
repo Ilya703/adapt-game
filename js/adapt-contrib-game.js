@@ -16,8 +16,6 @@ define([
 
       this.setReadyStatus(); 
 
-      // this.resizeImage(Adapt.device.screenSize, true);
-
       if (this.model.get('_setCompletionOn') === 'inview') {
         this.setupInviewCompletion();
       }
@@ -51,6 +49,7 @@ define([
         	inner.classList.add("show");
         	inner1.classList.add("show");
           if (m == 0) {
+            this.resizeImage(Adapt.device.screenSize, true);
             m += 1;
           };
           	if (counter < p/2){
@@ -80,6 +79,7 @@ define([
         	inner.classList.add("show");
         	inner1.classList.add("show");
           if (m == 0) {
+            this.resizeImage(Adapt.device.screenSize, true);
             m += 1;
           };
           	if (counter < p/2){
