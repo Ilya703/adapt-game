@@ -6,7 +6,7 @@
   "issues": "https://github.com/Ilya703/adapt-game/issues/new",
   "component" : "game",
   "displayName" : "game",
-  "description": "A simple core contributed text component",
+  "description": "A simple question game component",
   "main": "/js/adapt-contrib-game.js",
   "keywords": [
     "adapt-plugin",

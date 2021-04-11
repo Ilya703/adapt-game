@@ -20,6 +20,7 @@ define([
         this.setupInviewCompletion();
       }
 
+      var self = this;
       var button1 = document.querySelector(".button_1");
       var button2 = document.querySelector(".button_2");
       var count = document.querySelector(".count");
@@ -49,7 +50,7 @@ define([
         	inner.classList.add("show");
         	inner1.classList.add("show");
           if (m == 0) {
-            this.resizeImage(Adapt.device.screenSize, true);
+            self.resizeImage(Adapt.device.screenSize, true);
             m += 1;
           };
           	if (counter < p/2){
@@ -79,7 +80,7 @@ define([
         	inner.classList.add("show");
         	inner1.classList.add("show");
           if (m == 0) {
-            this.resizeImage(Adapt.device.screenSize, true);
+            self.resizeImage(Adapt.device.screenSize, true);
             m += 1;
           };
           	if (counter < p/2){
