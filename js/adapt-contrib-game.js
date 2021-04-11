@@ -14,7 +14,9 @@ define([
 
     postRender() {
 
-      this.resizeImage(Adapt.device.screenSize, true);
+      this.setReadyStatus(); 
+
+      // this.resizeImage(Adapt.device.screenSize, true);
 
       if (this.model.get('_setCompletionOn') === 'inview') {
         this.setupInviewCompletion();
@@ -117,15 +119,14 @@ define([
     }
 
     resizeImage(setupInView) {
-    	if (m >= 1) {
-    		this.$('.graphic__widget').imageready(() => {
-        	this.setReadyStatus();
 
-        		if (setupInView) {
-          			this.setupInviewCompletion('.game__widget');
-        		}
-       		});
-    	}
+    	this.$('.graphic__widget').imageready(() => {
+        this.setReadyStatus();
+
+        if (setupInView) {
+          this.setupInviewCompletion('.game__widget');
+        }
+       });
     }
 
     checkIfResetOnRevisit() {
