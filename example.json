@@ -1,4 +1,4 @@
-{
+ {
         "_id": "c-15",
         "_parentId": "b-10",
         "_type": "component",
@@ -24,11 +24,13 @@
                 "src": "course/en/images/pic1.jpg"
             }
         },
-        "_button1": {
-            "text": "ЭТО ЕСТЬ"
-        },
-        "_button2": {
-            "text": "ВОТ ЭТОГО НЕТ"
+        "_submit": {
+            "_button1": {
+                "text": "ЭТО ЕСТЬ"
+            },
+            "_button2": {
+                "text": "ВОТ ЭТОГО НЕТ"
+            }
         },
         "_play_again": {
             "text": "Играть еще раз"

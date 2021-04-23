@@ -1,70 +1,232 @@
- {
-        "_id": "c-15",
-        "_parentId": "b-10",
-        "_type": "component",
-        "_component": "game",
-        "_classes": "",
-        "_layout": "full",
-        "title": "Game",
-        "displayTitle": "Game",
-        "body": "",
-        "instruction": "",
-        "question": {
-            "text": "Попробуйте угадать, чего нет во дворце Владимира Путина"
-        },
-        "_feedback": {
-            "text1": "Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!",
-            "text2": "Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле"
-        },
-        "_graphic": {
-            "small":{
-                "src": "course/en/images/pic.jpg"
-            },
-            "large":{
-                "src": "course/en/images/pic1.jpg"
-            }
-        },
-        "_submit": {
-            "_button1": {
-                "text": "ЭТО ЕСТЬ"
-            },
-            "_button2": {
-                "text": "ВОТ ЭТОГО НЕТ"
-            }
-        },
-        "_play_again": {
-            "text": "Играть еще раз"
-        },
-        "_count": {
-            "text": "ОЧКИ:"
-        },
-        "_default_count": {
-            "text": 0
-        },
-        "_items": [
-            {
-                "_text":"Домашний театр",
-                "_shouldBeSelected": true
-            },
-            {
-                "_text":"Гардероб официантов",
-                "_shouldBeSelected": true
-            },
-            {
-                "_text":"Шубохранилище",
-                "_shouldBeSelected":false
-            },
-            {
-                "_text":"Аквадискотека",
-                "_shouldBeSelected":true
-            },
-            {
-                "_text":"Компьютерный клуб",
-                "_shouldBeSelected":false
-            }
-        ],
-        "_pageLevelProgress": {
-            "_isEnabled": true,
-            "_isCompletionIndicatorEnabled": true
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "question": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Default note text",
+            "default": "Попробуйте угадать, чего нет во дворце Владимира Путина",
+            "validators": [],
+            "help": "This is the default note text",
+            "translatable": true
+          }
         }
     },
+    "_setCompletionOn": {
+      "type": "string",
+      "required": false,
+      "default": "allItems",
+      "title": "Set completion on:",
+      "enum": ["inview", "allItems"],
+      "inputType": {
+        "type": "Select",
+        "options": ["inview", "allItems"]
+      },
+      "validators": [],
+      "help": "Whether completion is based on the learner having viewed all the game items - or just having viewed the component"
+    },
+    "_submit": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "_button1": {
+            "type": "object",
+            "required": false,
+            "properties": {
+              "text": {
+              "type": "string",
+              "required": true,
+              "inputType": "Text",
+              "title": "Button1 text",
+              "default": "ЭТО ЕСТЬ",
+              "validators": [],
+              "help": "This is the button1 text",
+              "translatable": true
+              }
+            } 
+          },
+          "_button2": {
+            "type": "object",
+            "required": false,
+            "properties": {
+              "text": {
+              "type": "string",
+              "required": true,
+              "inputType": "Text",
+              "title": "Button2 text",
+              "default": "ВОТ ЭТОГО НЕТ",
+              "validators": [],
+              "help": "This is the button2 text",
+              "translatable": true
+              }
+            }
+          },
+        }
+    },
+    "_play_again": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "play_again text",
+            "default": "Играть еще раз",
+            "validators": [],
+            "help": "This is the play_again text",
+            "translatable": true
+          }
+        }
+    },
+    "_feedback": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text1": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Answer1 text",
+            "default": "Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!",
+            "validators": [],
+            "help": "This is the answer1 text",
+            "translatable": true
+          },
+          "text2": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Answer2 text",
+            "default": "Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле",
+            "validators": [],
+            "help": "This is the answer2 text",
+            "translatable": true
+          }
+        }
+    },
+    "_graphic": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "small": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "inputType": "Asset:image",
+          "validators": ["required"],
+          "help": "Small picture"
+        },
+        "large": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "inputType": "Asset:image",
+          "validators": ["required"],
+          "help": "Background picture"
+        }
+      }
+    },
+    "_count": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "count text",
+            "default": "ОЧКИ:",
+            "validators": [],
+            "help": "This is the count text",
+            "translatable": true
+          }
+        }
+    },
+    "_default_count": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text": {
+            "type": "number",
+            "required": true,
+            "inputType": "Number",
+            "title": "Default counter",
+            "default": 0,
+            "validators": [],
+            "help": "This is the default counter text",
+            "translatable": true
+          }
+        }
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "_text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Game Title",
+            "default": "question",
+            "validators": [],
+            "help": "This is the item title",
+            "translatable": true
+          },
+          "_shouldBeSelected": {
+            "type": "boolean",
+            "required": true,
+            "title": "True or False",
+            "default": "true",
+            "enum": [true, false],
+            "inputType": {
+              "type": "Select",
+              "options": [true, false]
+            },
+            "validators": [],
+            "help": "This is the item answer: true or false",
+            "translatable": true
+          }
+        }
+      }
+    }
+  }
+}
