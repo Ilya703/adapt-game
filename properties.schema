@@ -13,6 +13,22 @@
       "translatable": true
     }
   },
+  "question": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Question",
+            "default": "Попробуйте угадать, чего нет во дворце Владимира Путина",
+            "validators": [],
+            "help": "This is the default note text",
+            "translatable": true
+          }
+        }
+    },
   "properties": {
     "_supportedLayout": {
       "type": "string",
@@ -29,22 +45,6 @@
       "validators": [],
       "help": "This is the instruction text",
       "translatable": true
-    },
-    "question": {
-      "type": "object",
-      "required": false,
-      "properties": {
-          "text": {
-            "type": "string",
-            "required": true,
-            "inputType": "Text",
-            "title": "Default note text",
-            "default": "Попробуйте угадать, чего нет во дворце Владимира Путина",
-            "validators": [],
-            "help": "This is the default note text",
-            "translatable": true
-          }
-        }
     },
     "_setCompletionOn": {
       "type": "string",
