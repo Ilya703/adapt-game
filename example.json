@@ -1,4 +1,4 @@
- {
+{
         "_id": "c-15",
         "_parentId": "b-10",
         "_type": "component",
@@ -9,17 +9,20 @@
         "displayTitle": "Game",
         "body": "",
         "instruction": "",
-        "_picture-small": {
-            "src": "course/en/images/pic.png"
+        "question": {
+            "text": "Попробуйте угадать, чего нет во дворце Владимира Путина"
         },
-        "_pic-background": {
-            "src": "course/en/images/pic1.jpg"
+        "_feedback": {
+            "text1": "Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!",
+            "text2": "Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле"
         },
-        "_answer1": {
-            "text": "Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!"
-        },
-        "_answer2": {
-            "text": "Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле"
+        "_graphic": {
+            "small":{
+                "src": "course/en/images/pic.jpg"
+            },
+            "large":{
+                "src": "course/en/images/pic1.jpg"
+            }
         },
         "_button1": {
             "text": "ЭТО ЕСТЬ"
@@ -36,29 +39,26 @@
         "_default_count": {
             "text": 0
         },
-        "_note": {
-            "text": "Попробуйте угадать, чего нет во дворце Владимира Путина"
-        },
         "_items": [
             {
                 "_text":"Домашний театр",
-                "isTrue": true
+                "_shouldBeSelected": true
             },
             {
                 "_text":"Гардероб официантов",
-                "isTrue": true
+                "_shouldBeSelected": true
             },
             {
                 "_text":"Шубохранилище",
-                "isTrue":false
+                "_shouldBeSelected":false
             },
             {
                 "_text":"Аквадискотека",
-                "isTrue":true
+                "_shouldBeSelected":true
             },
             {
                 "_text":"Компьютерный клуб",
-                "isTrue":false
+                "_shouldBeSelected":false
             }
         ],
         "_pageLevelProgress": {

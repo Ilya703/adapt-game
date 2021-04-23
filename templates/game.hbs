@@ -7,15 +7,15 @@
       <div class="game_1">
       	<div class="block_1">
           <div class="block_in">
-            <img class="js-game-set-image-src pic1" src="{{_pic-background.pic_background}}">
+            <img class="js-game-set-image-src pic1" src="{{_graphic.large}}">
           </div>
           <div class="block_in1">
             <div class="result">
-              <div class="text_in">{{_note.text}}</div>
+              <div class="text_in">{{question.text}}</div>
               <div class="box">
                 <div class="num" id="num"></div>
-                <div class="phrase is_hide" id="phrase1">{{_answer1.text}}</div>
-                <div class="phrase is_hide" id="phrase2">{{_answer2.text}}</div>
+                <div class="phrase is_hide" id="phrase1">{{_feedback.text1}}</div>
+                <div class="phrase is_hide" id="phrase2">{{_feedback.text2}}</div>
               </div>
             </div>
             <div style="display:flex;justify-content: center;margin-top:30px;">
@@ -28,14 +28,14 @@
       			<div class="count" id="count">{{_default_count.text}}</div>
       		</div>
       		<div class="question">
-      			<img class="js-game-set-image-src pic" src="{{_picture-small.pic_small}}">
+      			<img class="js-game-set-image-src pic" src="{{_graphic.small}}">
             {{#each _items}}
-      			 <div class="text_ is_hide" data-index="{{@index}}" data-isTrue="{{this.isTrue}}">{{this._text}}</div>
+      			 <div class="text_ is_hide" data-index="{{@index}}" data-isTrue="{{this._shouldBeSelected}}">{{this._text}}</div>
             {{/each}}
       		</div>
       		<div class="buttons">
-      			<div class="button_1 game__item-btn">{{_button1.text}}</div>
-      			<div class="button_2 game__item-btn">{{_button2.text}}</div>
+      			<div class="button_1 accordion__item-btn">{{_button1.text}}</div>
+      			<div class="button_2 accordion__item-btn">{{_button2.text}}</div>
       		</div>
       	</div>
       </div>

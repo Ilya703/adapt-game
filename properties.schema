@@ -30,6 +30,22 @@
       "help": "This is the instruction text",
       "translatable": true
     },
+    "question": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Default note text",
+            "default": "Попробуйте угадать, чего нет во дворце Владимира Путина",
+            "validators": [],
+            "help": "This is the default note text",
+            "translatable": true
+          }
+        }
+    },
     "_setCompletionOn": {
       "type": "string",
       "required": false,
@@ -91,11 +107,11 @@
           }
         }
     },
-    "_answer1": {
+    "_feedback": {
       "type": "object",
       "required": false,
       "properties": {
-          "text": {
+          "text1": {
             "type": "string",
             "required": true,
             "inputType": "Text",
@@ -104,14 +120,8 @@
             "validators": [],
             "help": "This is the answer1 text",
             "translatable": true
-          }
-        }
-    },
-    "_answer2": {
-      "type": "object",
-      "required": false,
-      "properties": {
-          "text": {
+          },
+          "text2": {
             "type": "string",
             "required": true,
             "inputType": "Text",
@@ -123,25 +133,19 @@
           }
         }
     },
-    "_picture-small": {
+    "_graphic": {
       "type": "object",
       "required": false,
       "properties": {
-        "pic_small": {
+        "small": {
           "type": "string",
           "required": true,
           "default": "",
           "inputType": "Asset:image",
           "validators": ["required"],
           "help": "Small picture"
-        }
-      }
-    },
-    "_pic-background": {
-      "type": "object",
-      "required": false,
-      "properties": {
-        "pic_background": {
+        },
+        "large": {
           "type": "string",
           "required": true,
           "default": "",
@@ -183,22 +187,6 @@
           }
         }
     },
-    "_note": {
-      "type": "object",
-      "required": false,
-      "properties": {
-          "text": {
-            "type": "string",
-            "required": true,
-            "inputType": "Text",
-            "title": "Default note text",
-            "default": "Попробуйте угадать, чего нет во дворце Владимира Путина",
-            "validators": [],
-            "help": "This is the default note text",
-            "translatable": true
-          }
-        }
-    },
     "_items": {
       "type": "array",
       "required": true,
@@ -217,7 +205,7 @@
             "help": "This is the item title",
             "translatable": true
           },
-          "isTrue": {
+          "_shouldBeSelected": {
             "type": "boolean",
             "required": true,
             "title": "True or False",
