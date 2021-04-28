@@ -82,8 +82,78 @@
              "validators": [],
              "help": "This is the answer2 text",
              "translatable": true
-           }
-           "_count": {
+           },
+           "_button1": {
+             "type": "object",
+             "required": false,
+             "properties": {
+              "text": {
+               "type": "string",
+               "required": true,
+               "inputType": "Text",
+               "title": "Button1",
+               "default": "ЭТО ЕСТЬ",
+               "validators": [],
+               "help": "This is the button1 text",
+               "translatable": true
+              }
+             } 
+           },
+           "_button2": {
+             "type": "object",
+             "required": false,
+             "properties": {
+              "text": {
+               "type": "string",
+               "required": true,
+               "inputType": "Text",
+               "title": "Button2",
+               "default": "ВОТ ЭТОГО НЕТ",
+               "validators": [],
+               "help": "This is the button2 text",
+               "translatable": true
+              }
+             }
+           },
+           "_graphic": {
+             "type": "object",
+             "required": false,
+             "properties": {
+                "small": {
+                 "type": "string",
+                 "required": true,
+                 "default": "",
+                 "inputType": "Asset:image",
+                 "validators": ["required"],
+                 "help": "Small picture"
+                },
+                "large": {
+                 "type": "string",
+                 "required": true,
+                 "default": "",
+                 "inputType": "Asset:image",
+                 "validators": ["required"],
+                 "help": "Background picture"
+                }
+              }
+           },
+          "_play_again": {
+      	       "type": "object",
+      	       "required": false,
+               "properties": {
+                   "text": {
+                     "type": "string",
+                     "required": true,
+                     "inputType": "Text",
+                     "title": "play_again",
+                     "default": "Играть еще раз",
+                     "validators": [],
+                     "help": "This is the play_again text",
+                     "translatable": true
+                    }
+                }
+           },
+          "_count": {
                "type": "object",
                "required": false,
                "properties": {
@@ -95,11 +165,11 @@
 		             "default": "ОЧКИ:",
 		             "validators": [],
 		             "help": "This is the count text",
-		             "translatable": True
+		             "translatable": true
                     }
                 }
-            },
-            "_default_count": {
+           },
+          "_default_count": {
                 "type": "object",
                 "required": false,
                 "properties": {
@@ -114,8 +184,8 @@
                      "translatable": true
                     }
                 }
-            }
-       }
+           }
+        }
     },
     "_items": {
       "type": "array",
