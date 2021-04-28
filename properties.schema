@@ -88,14 +88,14 @@
             "required": false,
             "properties": {
               "text": {
-              "type": "string",
-              "required": true,
-              "inputType": "Text",
-              "title": "Button1",
-              "default": "ЭТО ЕСТЬ",
-              "validators": [],
-              "help": "This is the button1 text",
-              "translatable": true
+               "type": "string",
+               "required": true,
+               "inputType": "Text",
+               "title": "Button1",
+               "default": "ЭТО ЕСТЬ",
+               "validators": [],
+               "help": "This is the button1 text",
+               "translatable": true
               }
             } 
           },
@@ -104,14 +104,14 @@
             "required": false,
             "properties": {
               "text": {
-              "type": "string",
-              "required": true,
-              "inputType": "Text",
-              "title": "Button2",
-              "default": "ВОТ ЭТОГО НЕТ",
-              "validators": [],
-              "help": "This is the button2 text",
-              "translatable": true
+               "type": "string",
+               "required": true,
+               "inputType": "Text",
+               "title": "Button2",
+               "default": "ВОТ ЭТОГО НЕТ",
+               "validators": [],
+               "help": "This is the button2 text",
+               "translatable": true
               }
             }
           },
