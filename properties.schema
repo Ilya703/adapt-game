@@ -138,18 +138,18 @@
              }
           },
           "_play_again": {
-      	  "type": "object",
-      	  "required": false,
-          "properties": {
-              "text": {
-               "type": "string",
-               "required": true,
-               "inputType": "Text",
-               "title": "play_again",
-               "default": "Играть еще раз",
-               "validators": [],
-               "help": "This is the play_again text",
-               "translatable": true
+      	      "type": "object",
+      	      "required": false,
+              "properties": {
+                  "text": {
+                   "type": "string",
+                   "required": true,
+                   "inputType": "Text",
+                   "title": "play_again",
+                   "default": "Играть еще раз",
+                   "validators": [],
+                   "help": "This is the play_again text",
+                   "translatable": true
                 }
               }
            },
