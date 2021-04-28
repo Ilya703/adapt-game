@@ -82,7 +82,23 @@
              "validators": [],
              "help": "This is the answer2 text",
              "translatable": true
-           }
+           },
+           "question": {
+      "type": "object",
+      "required": false,
+      "properties": {
+          "text": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "question",
+            "default": "Попробуйте угадать, чего нет во дворце Владимира Путина",
+            "validators": [],
+            "help": "This is the default note text",
+            "translatable": true
+          }
+        }
+    }
        }
     },
     "_items": {
