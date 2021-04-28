@@ -63,30 +63,30 @@
       "type": "object",
       "required": false,
       "properties": {
-          "text1": {
-            "type": "string",
-            "required": true,
-            "inputType": "Text",
-            "title": "Answer1",
-            "default": "Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!",
-            "validators": [],
-            "help": "This is the answer1 text",
-            "translatable": true
-          },
-          "text2": {
-            "type": "string",
-            "required": true,
-            "inputType": "Text",
-            "title": "Answer2",
-            "default": "Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле",
-            "validators": [],
-            "help": "This is the answer2 text",
-            "translatable": true
-          },
-          "_button1": {
-            "type": "object",
-            "required": false,
-            "properties": {
+           "text1": {
+             "type": "string",
+             "required": true,
+             "inputType": "Text",
+             "title": "Answer1",
+             "default": "Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!",
+             "validators": [],
+             "help": "This is the answer1 text",
+             "translatable": true
+           },
+           "text2": {
+             "type": "string",
+             "required": true,
+             "inputType": "Text",
+             "title": "Answer2",
+             "default": "Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле",
+             "validators": [],
+             "help": "This is the answer2 text",
+             "translatable": true
+           },
+           "_button1": {
+             "type": "object",
+             "required": false,
+             "properties": {
               "text": {
                "type": "string",
                "required": true,
@@ -97,12 +97,12 @@
                "help": "This is the button1 text",
                "translatable": true
               }
-            } 
-          },
-          "_button2": {
-            "type": "object",
-            "required": false,
-            "properties": {
+             } 
+           },
+           "_button2": {
+             "type": "object",
+             "required": false,
+             "properties": {
               "text": {
                "type": "string",
                "required": true,
@@ -113,12 +113,12 @@
                "help": "This is the button2 text",
                "translatable": true
               }
-            }
-          },
-          "_graphic": {
-            "type": "object",
-            "required": false,
-            "properties": {
+             }
+           },
+           "_graphic": {
+             "type": "object",
+             "required": false,
+             "properties": {
                 "small": {
                  "type": "string",
                  "required": true,
@@ -135,25 +135,25 @@
                  "validators": ["required"],
                  "help": "Background picture"
                 }
-             }
-          },
-          "_play_again": {
-      	      "type": "object",
-      	      "required": false,
-              "properties": {
-                  "text": {
-                   "type": "string",
-                   "required": true,
-                   "inputType": "Text",
-                   "title": "play_again",
-                   "default": "Играть еще раз",
-                   "validators": [],
-                   "help": "This is the play_again text",
-                   "translatable": true
-                }
               }
            },
-           "_count": {
+          "_play_again": {
+      	       "type": "object",
+      	       "required": false,
+               "properties": {
+                   "text": {
+                     "type": "string",
+                     "required": true,
+                     "inputType": "Text",
+                     "title": "play_again",
+                     "default": "Играть еще раз",
+                     "validators": [],
+                     "help": "This is the play_again text",
+                     "translatable": true
+                    }
+                }
+           },
+          "_count": {
                "type": "object",
                "required": false,
                "properties": {
@@ -168,8 +168,8 @@
 		             "translatable": True
                     }
                 }
-            },
-            "_default_count": {
+           },
+          "_default_count": {
                 "type": "object",
                 "required": false,
                 "properties": {
@@ -184,8 +184,8 @@
                      "translatable": true
                     }
                 }
-            }
-        }
+           }
+       }
     },
     "_items": {
       "type": "array",
