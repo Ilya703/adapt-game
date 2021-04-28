@@ -14,33 +14,31 @@
         },
         "_feedback": {
             "text1": "Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!",
-            "text2": "Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле"
-        },
-        "_graphic": {
+            "text2": "Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле",
+            "_graphic": {
             "small":{
                 "src": "course/en/images/pic.jpg"
+                },
+                "large":{
+                    "src": "course/en/images/pic1.jpg"
+                }
             },
-            "large":{
-                "src": "course/en/images/pic1.jpg"
-            }
-        },
-        "_submit": {
             "_button1": {
                 "text": "ЭТО ЕСТЬ"
             },
             "_button2": {
                 "text": "ВОТ ЭТОГО НЕТ"
+            },
+            "_play_again": {
+                "text": "Играть еще раз"
+            },
+            "_count": {
+                "text": "ОЧКИ:"
+            },
+            "_default_count": {
+                "text": 0
             }
-        },
-        "_play_again": {
-            "text": "Играть еще раз"
-        },
-        "_count": {
-            "text": "ОЧКИ:"
-        },
-        "_default_count": {
-            "text": 0
-        },
+        },     
         "_items": [
             {
                 "_text":"Домашний театр",

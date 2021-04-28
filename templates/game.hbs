@@ -7,7 +7,7 @@
       <div class="game_1">
       	<div class="block_1">
           <div class="block_in">
-            <img class="js-game-set-image-src pic1" src="{{_graphic.large}}">
+            <img class="js-game-set-image-src pic1" src="{{_feedback._graphic.large}}">
           </div>
           <div class="block_in1">
             <div class="result">
@@ -20,22 +20,22 @@
             </div>
             <div style="display:flex;justify-content: center;margin-top:30px;">
               <div class="arrow">&#11118;</div>
-              <div class="once_more">{{_play_again.text}}</div>
+              <div class="once_more">{{_feedback._play_again.text}}</div>
             </div>
           </div>
       		<div style="display:flex; justify-content: center;">
-      			<div class="count-text">{{_count.text}}</div>
-      			<div class="count" id="count">{{_default_count.text}}</div>
+      			<div class="count-text">{{_feedback._count.text}}</div>
+      			<div class="count" id="count">{{_feedback._default_count.text}}</div>
       		</div>
       		<div class="question">
-      			<img class="js-game-set-image-src pic" src="{{_graphic.small}}">
+      			<img class="js-game-set-image-src pic" src="{{_feedback._graphic.small}}">
             {{#each _items}}
       			 <div class="text_ is_hide" data-index="{{@index}}" data-isTrue="{{this._shouldBeSelected}}">{{this._text}}</div>
             {{/each}}
       		</div>
       		<div class="buttons">
-      			<div class="button_1 btn-text">{{_submit._button1.text}}</div>
-      			<div class="button_2 btn-text">{{_submit._button2.text}}</div>
+      			<div class="button_1 btn-text">{{_feedback._button1.text}}</div>
+      			<div class="button_2 btn-text">{{_feedback._button2.text}}</div>
             </button>
       		</div>
       	</div>

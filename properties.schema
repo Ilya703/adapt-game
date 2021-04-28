@@ -59,10 +59,30 @@
       "validators": [],
       "help": "Whether completion is based on the learner having viewed all the game items - or just having viewed the component"
     },
-    "_submit": {
+    "_feedback": {
       "type": "object",
       "required": false,
       "properties": {
+          "text1": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Answer1",
+            "default": "Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!",
+            "validators": [],
+            "help": "This is the answer1 text",
+            "translatable": true
+          },
+          "text2": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Answer2",
+            "default": "Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле",
+            "validators": [],
+            "help": "This is the answer2 text",
+            "translatable": true
+          },
           "_button1": {
             "type": "object",
             "required": false,
@@ -94,103 +114,77 @@
               "translatable": true
               }
             }
-          }
-        }
-    },
-    "_play_again": {
-      "type": "object",
-      "required": false,
-      "properties": {
-          "text": {
-            "type": "string",
-            "required": true,
-            "inputType": "Text",
-            "title": "play_again",
-            "default": "Играть еще раз",
-            "validators": [],
-            "help": "This is the play_again text",
-            "translatable": true
-          }
-        }
-    },
-    "_feedback": {
-      "type": "object",
-      "required": false,
-      "properties": {
-          "text1": {
-            "type": "string",
-            "required": true,
-            "inputType": "Text",
-            "title": "Answer1",
-            "default": "Мне удалось заблудиться во «дворце Путина». Ищите меня на складе грязи!",
-            "validators": [],
-            "help": "This is the answer1 text",
-            "translatable": true
           },
-          "text2": {
-            "type": "string",
-            "required": true,
-            "inputType": "Text",
-            "title": "Answer2",
-            "default": "Я знаю, как устроен «дворец Путина». Ищите меня в spa-капсуле",
-            "validators": [],
-            "help": "This is the answer2 text",
-            "translatable": true
-          }
-        }
-    },
-    "_graphic": {
-      "type": "object",
-      "required": false,
-      "properties": {
-        "small": {
-          "type": "string",
-          "required": true,
-          "default": "",
-          "inputType": "Asset:image",
-          "validators": ["required"],
-          "help": "Small picture"
-        },
-        "large": {
-          "type": "string",
-          "required": true,
-          "default": "",
-          "inputType": "Asset:image",
-          "validators": ["required"],
-          "help": "Background picture"
-        }
-      }
-    },
-    "_count": {
-      "type": "object",
-      "required": false,
-      "properties": {
-          "text": {
-            "type": "string",
-            "required": true,
-            "inputType": "Text",
-            "title": "count",
-            "default": "ОЧКИ:",
-            "validators": [],
-            "help": "This is the count text",
-            "translatable": true
-          }
-        }
-    },
-    "_default_count": {
-      "type": "object",
-      "required": false,
-      "properties": {
-          "text": {
-            "type": "number",
-            "required": true,
-            "inputType": "Number",
-            "title": "Default counter",
-            "default": 0,
-            "validators": [],
-            "help": "This is the default counter text",
-            "translatable": true
-          }
+          "_graphic": {
+            "type": "object",
+            "required": false,
+            "properties": {
+                "small": {
+                 "type": "string",
+                 "required": true,
+                 "default": "",
+                 "inputType": "Asset:image",
+                 "validators": ["required"],
+                 "help": "Small picture"
+                },
+                "large": {
+                 "type": "string",
+                 "required": true,
+                 "default": "",
+                 "inputType": "Asset:image",
+                 "validators": ["required"],
+                 "help": "Background picture"
+                }
+             }
+          },
+          "_play_again": {
+      	  "type": "object",
+      	  "required": false,
+          "properties": {
+              "text": {
+               "type": "string",
+               "required": true,
+               "inputType": "Text",
+               "title": "play_again",
+               "default": "Играть еще раз",
+               "validators": [],
+               "help": "This is the play_again text",
+               "translatable": true
+                }
+              }
+           },
+           "_count": {
+               "type": "object",
+               "required": false,
+               "properties": {
+                   "text": {
+                     "type": "string",
+                     "required": true,
+                     "inputType": "Text",
+		             "title": "count",
+		             "default": "ОЧКИ:",
+		             "validators": [],
+		             "help": "This is the count text",
+		             "translatable": True
+                    }
+                }
+            },
+            "_default_count": {
+                "type": "object",
+                "required": false,
+                "properties": {
+                   "text": {
+                     "type": "number",
+                     "required": true,
+                     "inputType": "Number",
+                     "title": "Default counter",
+                     "default": 0,
+                     "validators": [],
+                     "help": "This is the default counter text",
+                     "translatable": true
+                    }
+                }
+            }
         }
     },
     "_items": {
